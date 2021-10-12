@@ -5,6 +5,7 @@ import Cursor from "./component/Cursor";
 import jsonData from "./data/data.json";
 import { Parallax } from "react-parallax";
 import { ExternalLink } from "react-external-link";
+import AboutSection from "./component/AboutSection";
 const inlineStyle = {
   // background: '#fff',
   background: "transparent",
@@ -69,7 +70,7 @@ const detailsDiv = (id, txt1, txt2, txt3, txt4, txt5, imageSrc, outLink) => {
       </ul>
 
       <div className="detailsRightSection">
-        
+
         {id == 0 && <img src={require(`${imageSrc}`).default} className="detailsPic" />}
 
         {id != 0 && (
@@ -146,7 +147,11 @@ function App() {
       <section id="home">
         <HomeSection />
       </section>
-
+      <section
+            id="aboutMe"
+          >
+            <AboutSection />
+          </section>
       <section id="experiences" className="experiencesContainer">
         {jsonData.experiences.map((experience, i) => (
           <>{experienceDiv(experience.id)}</>
