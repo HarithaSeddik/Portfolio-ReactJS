@@ -6,7 +6,7 @@ import { faLeaf } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = () => {
 
-    const [showBackground, setShowBackground] = useState(true)
+    const [showBackground, setShowBackground] = useState(false)
     const handleClick = () => {
         console.log('clicky clicky')
     }
