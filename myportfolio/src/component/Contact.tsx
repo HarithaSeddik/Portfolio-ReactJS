@@ -45,7 +45,7 @@ const Contact = () => {
         email:'',
         message:''
     }
-    const recaptchaKey = '6LeCVbMcAAAAAA1FzYgd0s29-k0IpRr8xFB3jyri';
+    const recaptchaKey = '6Ld4W8gcAAAAACBKlXft6c1Z764vq16iE8uGgbcc';
 
     const [formState, setFormState] = useState<FormState>(initialFormState);
     const [submitting, setSubmitting] = useState<boolean>(false);
