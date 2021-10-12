@@ -115,7 +115,7 @@
 
 .skillsContainer .mediaContainer{
     position: relative;
-    padding-bottom: calc(55.94% +44px);
+    /* padding-bottom: calc(55.94% +44px); */
     /* background: rgb(148, 144, 136); */
     left: 10%;
     top: 40%;
