@@ -1,7 +1,7 @@
-import './App.css';
+import "./App.css";
 import { useState, useEffect } from "react";
 import HomeSection from "./component/HomeSection";
-import Navbar from './component/Navbar';
+import Navbar from "./component/Navbar";
 import jsonData from "./data/data.json";
 import { Parallax } from "react-parallax";
 import { ExternalLink } from "react-external-link";
@@ -26,7 +26,6 @@ function App() {
     whiteSpace: "nowrap",
   };
 
-  
   const titleDiv = (id, txt1, txt2, txt3, imageSrc) => {
     const titleImage = `${require(`${imageSrc}`).default}`;
     return (
@@ -68,10 +67,11 @@ function App() {
             <h3> {txt5} </h3>
           </li>
         </ul>
-  
+
         <div className="detailsRightSection">
-          
-          {id == 0 && <img src={require(`${imageSrc}`).default} className="detailsPic" />}
+          {id == 0 && (
+            <img src={require(`${imageSrc}`).default} className="detailsPic" />
+          )}
           {id != 0 && (
             <div className="mediaContainer">
               <div className="videoWrapper">
@@ -84,15 +84,10 @@ function App() {
                   }}
                 >
                   {(id == 2 || id == 3 || id == 1) && (
-                    <ExternalLink
-                      className="linkContainer"
-                      href={
-                        outLink
-                      }
-                    >
+                    <ExternalLink className="linkContainer" href={outLink}>
                       <button className="youtubeButton">
-                        <p> {id ==1? 'Visit Website!': 'Watch Me!'} </p>
-                        { id !=1 && <i className="fa fa-youtube-play"> </i>}
+                        <p> {id == 1 ? "Visit Website!" : "Watch Me!"} </p>
+                        {id != 1 && <i className="fa fa-youtube-play"> </i>}
                       </button>
                     </ExternalLink>
                   )}
@@ -104,7 +99,7 @@ function App() {
       </div>
     );
   };
-  
+
   const experienceDiv = (id, snapScroll) => {
     return (
       // <div className={snapScroll? 'experienceContainer': 'experienceContainer--nosnap'}>
@@ -116,7 +111,7 @@ function App() {
           jsonData.experiences[id]["title-text3"],
           jsonData.experiences[id]["title-imageSrc"]
         )}
-  
+
         {detailsDiv(
           jsonData.experiences[id]["id"],
           jsonData.experiences[id]["details-text1"],
@@ -134,18 +129,11 @@ function App() {
   const [snapScroll, setSnapScroll] = useState(true);
   return (
     <div className="App">
-      <Navbar/>
-      <section
-            id="home">
-            <HomeSection />
+      <Navbar />
+      <section id="home">
+        <HomeSection />
       </section>
-    <section id="experiences" className="experiencesContainer">
-            {jsonData.experiences.map((experience, i) => (
-              <>{experienceDiv(experience.id, snapScroll)}</>
-            ))}
-    </section>
-
-       
+     
     </div>
   );
 }
