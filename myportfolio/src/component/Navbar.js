@@ -22,19 +22,19 @@ const Navbar = () => {
         htmlElement.style.scrollSnapType='none'
     }
 
-    useEffect(() => {
-        function handleScroll() {
-          if (window.scrollY >= 0 && window.scrollY <= window.innerHeight / 2) {
-            setShowBackground(false)
+    // useEffect(() => {
+    //     function handleScroll() {
+    //       if (window.scrollY >= 0 && window.scrollY <= window.innerHeight / 2) {
+    //         setShowBackground(false)
             
-        } else {
-            setShowBackground(true)
-        }
+    //     } else {
+    //         setShowBackground(true)
+    //     }
     
-        }
-        window.addEventListener("scroll", handleScroll, { passive: true });
-        return () => window.removeEventListener("scroll", handleScroll);
-      }, [showBackground]);
+    //     }
+    //     window.addEventListener("scroll", handleScroll, { passive: true });
+    //     return () => window.removeEventListener("scroll", handleScroll);
+    //   }, [showBackground]);
 
 
     return (
