@@ -21,6 +21,40 @@ const Navbar = () => {
         htmlElement.style.scrollSnapType='none'
     }
 
+    useEffect(() => {
+        const handleScroll = (e) => {   
+            
+            if (window.scrollY >= 0 && window.scrollY <= window.innerHeight / 2) {
+                setShowBackground(false)
+            } else {
+                
+                setShowBackground(true)
+            }
+            let current = ''
+            sections.forEach( (section)=> {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+
+                if (window.scrollY >= (sectionTop- 0.1*sectionTop) && window.scrollY <= ( sectionTop + sectionHeight ) ){
+                    // console.log(sectionTop, sectionHeight)
+                    current = section.getAttribute('id')
+                    // console.log(current)
+                }
+            })
+            navLi.forEach((li) => {
+                li.classList.remove("active");
+                if (li.classList.contains(current)) {
+                  li.classList.add("active");
+                }
+              });
+        }
+
+        document.addEventListener('scroll', handleScroll);
+        return () => {
+            document.removeEventListener('scroll', handleScroll);
+        }
+    }, [showBackground])
+
 
     return (
        
