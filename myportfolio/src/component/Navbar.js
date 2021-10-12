@@ -21,23 +21,6 @@ const Navbar = () => {
         htmlElement.style.scrollSnapType='none'
     }
 
-    useEffect(() => {
-        const handleScroll = (e) => {   
-            
-            if (window.scrollY >= 0 && window.scrollY <= window.innerHeight / 2) {
-                setShowBackground(false)
-            } else {
-                
-                setShowBackground(true)
-            }
-           
-        }
-
-        document.addEventListener('scroll', handleScroll);
-        return () => {
-            document.removeEventListener('scroll', handleScroll);
-        }
-    }, [showBackground])
 
 
     return (
