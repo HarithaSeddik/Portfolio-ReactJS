@@ -105,7 +105,7 @@ const detailsDiv = (id, txt1, txt2, txt3, txt4, txt5, imageSrc, outLink) => {
 const experienceDiv = (id) => {
   return (
     // <div className={snapScroll? 'experienceContainer': 'experienceContainer--nosnap'}>
-    <div>
+    <div style={{scrollSnapAlign: 'start'}}>
       {titleDiv(
         jsonData.experiences[id]["id"],
         jsonData.experiences[id]["title-text1"],
@@ -144,15 +144,16 @@ function App() {
       >
         <Navbar />
       </div>
-      <section id="home">
+      <section id="home" style={{scrollSnapAlign: 'start'}}>
         <HomeSection />
       </section>
       <section
             id="aboutMe"
+            style={{scrollSnapAlign: 'start'}}
           >
             <AboutSection />
           </section>
-      <section id="experiences" className="experiencesContainer">
+      <section id="experiences" className="experiencesContainer" >
         {jsonData.experiences.map((experience, i) => (
           <>{experienceDiv(experience.id)}</>
         ))}
