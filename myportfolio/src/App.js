@@ -151,7 +151,7 @@ function App() {
     }
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [showButton, showBackground]);
+  }, [showButton]);
 
   const handleTopClick = () => {
     bodyElement.style.scrollSnapType = "none";
