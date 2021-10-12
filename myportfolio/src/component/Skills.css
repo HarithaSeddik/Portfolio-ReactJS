@@ -99,7 +99,10 @@
 }
 
 /* ANIMATIONS */
-
+.skillsContainer .skillsDivGif{
+    width: 30vw;
+    height: auto;
+}
 .skillsContainer{
     /* position:'relative'; */
     /* text-align:'center'; */

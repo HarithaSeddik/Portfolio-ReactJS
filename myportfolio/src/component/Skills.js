@@ -73,7 +73,7 @@ const Skills = () => {
                     </section>
 
                 </div>
-                <img src={gif}/>
+                <img className='skillsDivGif' src={gif}/>
 
             </div>
             
