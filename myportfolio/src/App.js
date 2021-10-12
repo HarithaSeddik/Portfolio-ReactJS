@@ -8,6 +8,7 @@ import { ExternalLink } from "react-external-link";
 import AboutSection from "./component/AboutSection";
 import React, {useEffect, useState} from 'react'
 import BackToTop from "./component/BackToTop";
+import Skills from "./component/Skills";
 const inlineStyle = {
   // background: '#fff',
   background: "transparent",
@@ -199,6 +200,16 @@ function App() {
           <>{experienceDiv(experience.id)}</>
         ))}
       </section>
+
+
+      <section
+            id="skills"
+            style={{ scrollSnapAlign:  "start" }}
+          >
+            <Skills />
+      </section>
+
+
     </div>
   );
 }
