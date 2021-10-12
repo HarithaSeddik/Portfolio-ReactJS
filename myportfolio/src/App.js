@@ -147,12 +147,6 @@ function App() {
         setShowButton(true);
         
       }
-      if (window.scrollY >= 0 && window.scrollY <= window.innerHeight / 2) {
-        setShowBackground(false)
-        
-    } else {
-        setShowBackground(true)
-    }
 
     }
     window.addEventListener("scroll", handleScroll, { passive: true });
