@@ -32,16 +32,13 @@ const HomeSection = () => {
             <img src = {backgroundPic} className='sectionBG'/>
             <div className ='textDiv'>
                 <h1> Hi, I am Haritha, </h1>
-
                 <p className='specialText'> 
                 I'm{' '}
                     <div className='animatedText'>
                      <TypingAnimation/>
                     </div>
-                    </p>
-                    
+                    </p>   
             </div>
-
 
             <ul className='socialLinksUL'>
                 <li>

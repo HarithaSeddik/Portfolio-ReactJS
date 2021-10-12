@@ -2,7 +2,7 @@ import React, {useState, useRef} from 'react'
 import './Navbar.css'
 import {Link} from 'react-scroll'
 import { useEffect } from 'react/cjs/react.development';
-import { faLeaf } from '@fortawesome/free-solid-svg-icons';
+
 
 const Navbar = () => {
 

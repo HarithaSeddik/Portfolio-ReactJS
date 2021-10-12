@@ -22,9 +22,9 @@
 }
 
 .textContainer{
-    text-transform: uppercase;
-    /* font-family:  'Playfair Display', serif; */
+    font-family:  'Playfair Display', serif;
     font-family: 'Saira Condensed', sans-serif;
+    text-transform: uppercase;
     text-decoration: none;
     /* background-color: darkgreen; */
     position: absolute;
