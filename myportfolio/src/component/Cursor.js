@@ -40,11 +40,9 @@ const Cursor = (bigScreen) => {
       if ( yPercent>10){
         bodyElement.style.scrollSnapType='y mandatory'
         htmlElement.style.scrollSnapType='y mandatory'
-        console.log('SNAP ON')
+        
       } else{
-        console.log('SNAP OFF')
-        // bodyElement.style.scrollSnapType='none'
-        // htmlElement.style.scrollSnapType='none'
+        
       }
       
       

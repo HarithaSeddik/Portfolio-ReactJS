@@ -6,6 +6,8 @@ import jsonData from "./data/data.json";
 import { Parallax } from "react-parallax";
 import { ExternalLink } from "react-external-link";
 import AboutSection from "./component/AboutSection";
+import React, {useEffect, useState} from 'react'
+import BackToTop from "./component/BackToTop";
 const inlineStyle = {
   // background: '#fff',
   background: "transparent",
@@ -129,6 +131,42 @@ const experienceDiv = (id) => {
   );
 };
 function App() {
+  const [showButton, setShowButton] = useState(false);
+  
+
+
+  const bodyElement = document.getElementsByTagName("BODY")[0];
+  const htmlElement = document.getElementsByTagName("HTML")[0];
+
+  useEffect(() => {
+    function handleScroll() {
+      if (window.scrollY < 100) {
+        setShowButton(false);
+        
+      }else {
+        setShowButton(true);
+        
+      }
+      if (window.scrollY >= 0 && window.scrollY <= window.innerHeight / 2) {
+        setShowBackground(false)
+        
+    } else {
+        setShowBackground(true)
+    }
+
+    }
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [showButton, showBackground]);
+
+  const handleTopClick = () => {
+    bodyElement.style.scrollSnapType = "none";
+    htmlElement.style.scrollSnapType = "none";
+    setTimeout(() => {
+      window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    }, 300);
+  };
+
   return (
     <div className="App">
       <Cursor />
@@ -144,6 +182,15 @@ function App() {
       >
         <Navbar />
       </div>
+
+      {showButton && (
+            <div
+              onClick={handleTopClick}
+            >
+              <BackToTop />
+            </div>
+          )}
+
       <section id="home" style={{scrollSnapAlign: 'start'}}>
         <HomeSection />
       </section>
