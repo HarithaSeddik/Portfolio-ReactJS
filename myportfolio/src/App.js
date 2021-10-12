@@ -2,7 +2,6 @@ import "./App.css";
 import { useState, useEffect } from "react";
 import HomeSection from "./component/HomeSection";
 
-import jsonData from "./data/data.json";
 
 function App() {
   
