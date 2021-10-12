@@ -23,15 +23,25 @@ const Navbar = () => {
 
 
     return (
-        // <div 
-        // className={setShowBackground?'navbarContainer':'navbarContainer--active'}
-        // >
+       
          <div className={showBackground?'navbarContainer--active':'navbarContainer'}> 
                 {/* {console.log(showBackground)} */}
             <div className={showBackground?'textContainer--active':'textContainer'}>
                 <ul className='textList'>
                     <Link onClick={handleClick} smooth to='home'>
                         <li className='home'>  Home </li>
+                    </Link>
+                    <Link onClick={handleClick} smooth to='aboutMe'>
+                        <li className='aboutMe'>  About Me </li>
+                    </Link>  
+                    <Link onClick={handleClick} smooth to='experiences'>
+                        <li className='experiences'>  Experience </li>
+                    </Link>  
+                    <Link onClick={handleClick} smooth to='skills'>
+                        <li className='skills'>  Skills </li>
+                    </Link>
+                    <Link onClick={handleClick} smooth to='contact'>
+                        <li className='contact'>  Contact </li>
                     </Link>
                 </ul>
             </div>
