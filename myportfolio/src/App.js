@@ -131,7 +131,7 @@ function App() {
     <div className="App">
       <Navbar />
       <section id="home">
-        <HomeSection />
+        {/* <HomeSection /> */}
       </section>
      
     </div>
