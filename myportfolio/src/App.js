@@ -9,6 +9,8 @@ import AboutSection from "./component/AboutSection";
 import React, {useEffect, useState} from 'react'
 import BackToTop from "./component/BackToTop";
 import Skills from "./component/Skills";
+import Contact from "./component/Contact";
+
 const inlineStyle = {
   // background: '#fff',
   background: "transparent",
@@ -207,6 +209,13 @@ function App() {
             style={{ scrollSnapAlign:  "start" }}
           >
             <Skills />
+      </section>
+
+      <section
+            id="contact"
+            style={{ scrollSnapAlign: "start" }}
+          >
+            <Contact />
       </section>
 
 
