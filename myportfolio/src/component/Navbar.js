@@ -40,7 +40,7 @@ const Navbar = (props) => {
     return (
        
          <div className={props.showBackground?'navbarContainer--active':'navbarContainer'}> 
-                {console.log(props.showBackground)}
+                {/* {console.log(props.showBackground)} */}
             <div className={props.showBackground?'textContainer--active':'textContainer'}>
                 <ul className='textList'>
                     <Link onClick={handleClick} smooth to='home'>
