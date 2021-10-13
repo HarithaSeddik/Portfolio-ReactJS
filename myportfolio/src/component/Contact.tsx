@@ -31,7 +31,7 @@ type ServiceMessage = {
     text: string;
 }
 
-const Contact = () => {
+const Contact = () => { 
 
     
     const classes= useStyles();

@@ -1,4 +1,3 @@
-import React from "react";
 import "./AboutSection.css";
 import aboutPic from "../images/aboutPic2.jpg";
 import { Link } from "react-scroll";
@@ -40,7 +39,7 @@ const AboutSection = () => {
             <br />
             You can find the source code for  <span>
               {" "}
-              <ExternalLink href='https://github.com/HarithaSeddik/My-Portfolio-ReactJS' target='_blank'>
+              <ExternalLink href='https://github.com/HarithaSeddik/Portfolio-ReactJS/' target='_blank'>
                    <a className='gitHubLink'>this ReactJS website</a>
               </ExternalLink>
             </span> and other cool
@@ -52,11 +51,6 @@ const AboutSection = () => {
               </ExternalLink>
             </span>{" "}
             page.
-            {/* To constantly develop my ability, I use my free time to take on 
-                    side projects that challenge my skills. 
-                    It helps me learn new technologies and discover 
-                    my creative side while having fun and building something 
-                    useful at the same time.  */}
             <br />
             <br /> Check out the rest of my{" "}
             <Link onClick={handleClick} smooth to="skills">
