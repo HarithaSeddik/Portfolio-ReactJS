@@ -341,7 +341,7 @@
     color: var(--orangeLight);
     width: 50vw;
     /* background: yellowgreen; */
-    font-size: 25px;
+    font-size: 3vh;
     z-index: 900;
     left: 50%;
     margin-left: -25vw;

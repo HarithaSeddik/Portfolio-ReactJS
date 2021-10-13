@@ -36,10 +36,10 @@ const Cursor = (bigScreen) => {
 
       const yPercent = Math.round(100*(t/totalHeight))
       const xPercent = Math.round(100*(w/totalWidth))
-      // console.log(xPercent,yPercent)
+      
       if ( yPercent>10){
-        bodyElement.style.scrollSnapType='y proximity'
-        htmlElement.style.scrollSnapType='y proximity'
+        bodyElement.style.scrollSnapType='y mandatory'
+        htmlElement.style.scrollSnapType='y mandatory'
         
       } else{
         

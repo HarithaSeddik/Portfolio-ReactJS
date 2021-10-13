@@ -1,7 +1,7 @@
 .contactDiv{
     /* background:var(--grey) ;*/
     background:var(--grey);
-    height: 77vh;
+    height: 80vh;
     display: flex;
     /* gap: 35vw; */
     gap:25vw
@@ -23,19 +23,19 @@
     /* font-size: 1em; */
 }
 .contactTextDiv h1{
-    font-size: 2.5vw;
-    margin-bottom: 10%;
+    font-size: 2.8vw;
+    margin-bottom: 8vh;
     color: var(--orangeLight)
 }
 .contactTextDiv h3{
-    font-size: 1.5vw;
+    font-size: 1.7vw;
 }
 .contactTextDiv .socialLinksUL{
     /* display: flex; */
     position: relative;
     width: fit-content;
     top: 30%;
-    left: 30%;
+    left: 24%;
     /* bottom: 20%; */
     
     }
@@ -66,10 +66,10 @@
   gap: 10%;
   /* grid-template-columns: repeat(2,auto); */
   justify-content: center;
-  width: 10em;
-  height: 4em;
+  width: 11vw;
+  height: 8vh;
   /* align-content: center; */
-  font-size: 1em;
+  font-size: 1vw;
   background-color: transparent;
   margin-top: 4%;
   color:var(--orangeLight);
@@ -94,7 +94,7 @@
 .customCard{
     position: relative;
     background-color: rgba(45,45,45,1);
-    top: 10%;
+    top: 8vh;
     right: 0%;
     height: fit-content;
 }
@@ -118,32 +118,32 @@
 }
 
 
-@media only screen and (min-width: 1700px) {
+@media only screen and (min-width: 1800px) {
     .contactDiv{
         /* background:var(--grey) ;*/
         background:var(--grey);
         height: 77vh;
         display: flex;
         /* gap: 35vw; */
-        gap:30vw;
+        gap:40vw;
         align-content: center;
         justify-content: center;
         position: relative;        
     }
     .customCard{
         top: 22%;
-        right: 20%;
+        right: 40%;
         /* padding-right: 10vw; */
     }
     .contactTextDiv{
-        top: 20%;
+        top: 10vh;
     }
     .contactTextDiv .socialLinksUL{
         /* display: flex;
         position: relative;
         width: fit-content; */
         top: 20%;
-        left: 25%;
+        left: 20%;
         /* bottom: 20%; */
         
         }

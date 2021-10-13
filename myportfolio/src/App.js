@@ -39,8 +39,9 @@ const titleDiv = (id, txt1, txt2, txt3, imageSrc) => {
         bgImage={titleImage}
         bgImageStyle={{ height: "1000px", width: "100%", opacity: "1" }}
         strength={400}
+        style={{height:'45vh'}}
       >
-        <div style={{ height: "50vh" }}>
+        <div style={{ height: "40vh" }}>
           <div style={inlineStyle}>
             <h1 className="roleTitle"> {txt1} </h1>
             <h2> {txt2}</h2>

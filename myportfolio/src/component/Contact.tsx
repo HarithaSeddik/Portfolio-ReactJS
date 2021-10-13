@@ -167,7 +167,7 @@ const Contact = () => {
                                     onChange={updateFormControl} 
                                     className={classes.TextField} 
                                     label="Message" 
-                                    multiline rows={4} 
+                                    multiline rows={3} 
                                     placeholder="Type your message here" 
                                     variant="outlined" 
                                     fullWidth 
