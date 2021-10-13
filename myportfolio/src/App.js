@@ -6,7 +6,7 @@ import jsonData from "./data/data.json";
 import { Parallax } from "react-parallax";
 import { ExternalLink } from "react-external-link";
 import AboutSection from "./component/AboutSection";
-import React, {useEffect, useState} from 'react'
+import React, { useEffect, useState } from "react";
 import BackToTop from "./component/BackToTop";
 import Skills from "./component/Skills";
 import Contact from "./component/Contact";
@@ -32,7 +32,6 @@ const inlineStyle = {
 };
 
 const titleDiv = (id, txt1, txt2, txt3, imageSrc) => {
-  
   const titleImage = `${require(`${imageSrc}`).default}`;
   return (
     <div className="titleDiv">
@@ -75,8 +74,9 @@ const detailsDiv = (id, txt1, txt2, txt3, txt4, txt5, imageSrc, outLink) => {
       </ul>
 
       <div className="detailsRightSection">
-
-        {id == 0 && <img src={require(`${imageSrc}`).default} className="detailsPic" />}
+        {id == 0 && (
+          <img src={require(`${imageSrc}`).default} className="detailsPic" />
+        )}
 
         {id != 0 && (
           <div className="mediaContainer">
@@ -86,7 +86,7 @@ const detailsDiv = (id, txt1, txt2, txt3, txt4, txt5, imageSrc, outLink) => {
                 style={{
                   backgroundImage:
                     // "url(./images/objRecVid.gif)"
-                    
+
                     `url(${require(`${imageSrc}`).default})`,
                 }}
               >
@@ -110,7 +110,7 @@ const detailsDiv = (id, txt1, txt2, txt3, txt4, txt5, imageSrc, outLink) => {
 const experienceDiv = (id) => {
   return (
     // <div className={snapScroll? 'experienceContainer': 'experienceContainer--nosnap'}>
-    <div style={{scrollSnapAlign: 'start'}}>
+    <div style={{ scrollSnapAlign: "start" }}>
       {titleDiv(
         jsonData.experiences[id]["id"],
         jsonData.experiences[id]["title-text1"],
@@ -135,8 +135,7 @@ const experienceDiv = (id) => {
 };
 function App() {
   const [showButton, setShowButton] = useState(false);
-  
-
+  const [showNavBackground, setShowNavBackground] = useState(null);
 
   const bodyElement = document.getElementsByTagName("BODY")[0];
   const htmlElement = document.getElementsByTagName("HTML")[0];
@@ -145,15 +144,20 @@ function App() {
     function handleScroll() {
       if (window.scrollY < 100) {
         setShowButton(false);
-        
-      }else {
+        setShowNavBackground(false);
+        console.log("DONT SHOW BG");
+      } else if (window.scrollY < window.innerHeight / 2) {
+        setShowNavBackground(false);
+        console.log(" SHOW BG");
+      } else {
         setShowButton(true);
+        setShowNavBackground(true);
+        console.log(" SHOW BG");
       }
-
     }
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [showButton]);
+  }, [showButton, showNavBackground]);
 
   const handleTopClick = () => {
     bodyElement.style.scrollSnapType = "none";
@@ -164,61 +168,49 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <>
       <Cursor />
-      <div
-        id="navbar"
-        style={{
-          top: "0%",
-          position: "fixed",
-          zIndex: "999",
-          width: "100%",
-          height: "8vh",
-        }}
-      >
-        <Navbar />
+      <div className="App">
+        <div
+          id="navbar"
+          style={{
+            top: "0%",
+            position: "fixed",
+            zIndex: "999",
+            width: "100%",
+            height: "8vh",
+          }}
+        >
+          <Navbar showBackground={showNavBackground} />
+        </div>
+
+        {showButton && (
+          <div onClick={handleTopClick}>
+            <BackToTop />
+          </div>
+        )}
+
+        <section id="home" style={{ scrollSnapAlign: "start" }}>
+          <HomeSection />
+        </section>
+        <section id="aboutMe" style={{ scrollSnapAlign: "start" }}>
+          <AboutSection />
+        </section>
+        <section id="experiences" className="experiencesContainer">
+          {jsonData.experiences.map((experience, i) => (
+            <>{experienceDiv(experience.id)}</>
+          ))}
+        </section>
+
+        <section id="skills" style={{ scrollSnapAlign: "start" }}>
+          <Skills />
+        </section>
+
+        <section id="contact" style={{ scrollSnapAlign: "start" }}>
+          <Contact />
+        </section>
       </div>
-
-      {showButton && (
-            <div
-              onClick={handleTopClick}
-            >
-              <BackToTop />
-            </div>
-          )}
-
-      <section id="home" style={{scrollSnapAlign: 'start'}}>
-        <HomeSection />
-      </section>
-      <section
-            id="aboutMe"
-            style={{scrollSnapAlign: 'start'}}
-          >
-            <AboutSection />
-          </section>
-      <section id="experiences" className="experiencesContainer" >
-        {jsonData.experiences.map((experience, i) => (
-          <>{experienceDiv(experience.id)}</>
-        ))}
-      </section>
-
-
-      <section
-            id="skills"
-            style={{ scrollSnapAlign:  "start" }}
-          >
-            <Skills />
-      </section>
-
-      <section
-            id="contact"
-            style={{ scrollSnapAlign: "start" }}
-          >
-            <Contact />
-      </section>
-
-
-    </div>
+    </>
   );
 }
 
