@@ -129,7 +129,6 @@ const experienceDiv = (id) => {
         jsonData.experiences[id]["details-imageSrc"],
         jsonData.experiences[id]["details-href"]
       )}
-      {/* {console.log(jsonData.experiences[id]['details-imageSrc'])} */}
     </div>
   );
 };
@@ -139,6 +138,8 @@ function App() {
 
   const bodyElement = document.getElementsByTagName("BODY")[0];
   const htmlElement = document.getElementsByTagName("HTML")[0];
+  const sections = document.querySelectorAll("section");
+  const navLi = document.querySelectorAll(".navbarContainer .textContainer ul li");
 
   useEffect(() => {
     function handleScroll() {
@@ -154,6 +155,23 @@ function App() {
         setShowNavBackground(true);
         console.log(" SHOW BG");
       }
+
+      let current = ''
+      sections.forEach( (section)=> {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+
+          if (window.scrollY >= (sectionTop- 0.1*sectionTop) && window.scrollY <= ( sectionTop + sectionHeight ) ){
+            current = section.getAttribute('id')
+          }
+      })
+      navLi.forEach((li) => {
+          li.classList.remove("active");
+          if (li.classList.contains(current)) {
+            li.classList.add("active");
+          }
+        });
+
     }
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
