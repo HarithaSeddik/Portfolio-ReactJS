@@ -88,8 +88,6 @@ const detailsDiv = (id, txt1, txt2, txt3, txt4, txt5, imageSrc, outLink) => {
                 className="videoContainer"
                 style={{
                   backgroundImage:
-                    // "url(./images/objRecVid.gif)"
-
                     `url(${require(`${imageSrc}`).default})`,
                 }}
               >
