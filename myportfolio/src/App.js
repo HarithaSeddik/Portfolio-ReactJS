@@ -10,6 +10,8 @@ import React, { useEffect, useState } from "react";
 import BackToTop from "./component/BackToTop";
 import Skills from "./component/Skills";
 import Contact from "./component/Contact";
+import Media from "react-media";
+import DisabledSection from "./component/DisabledSection";
 
 const inlineStyle = {
   // background: '#fff',
@@ -136,12 +138,13 @@ const experienceDiv = (id) => {
 function App() {
   const [showButton, setShowButton] = useState(false);
   const [showNavBackground, setShowNavBackground] = useState(null);
+  const [bigScreen, setBigScreen] = useState(true);
   
   const bodyElement = document.getElementsByTagName("BODY")[0];
   const htmlElement = document.getElementsByTagName("HTML")[0];
   const sections = document.querySelectorAll("section");
   const navLi = document.querySelectorAll(".navbarContainer .textContainer ul li");
-  const navLiHome = document.querySelector(".navbarContainer .textContainer ul .home");
+  // const navLiHome = document.querySelector(".navbarContainer .textContainer ul .home");
   
 
   useEffect(() => {
@@ -192,8 +195,17 @@ function App() {
 
   return (
     <>
-      <Cursor />
-      <div className="App">
+    <Cursor />
+     <Media queries={{
+          small: "(max-width: 599px)",
+          medium: "(min-width: 600px) and (max-width: 1199px)",
+          large: "(min-width: 1200px)"
+        }}>
+      {matches => (
+            <>
+              {matches.small && <DisabledSection/>}
+              {matches.medium && <DisabledSection/>}
+              {matches.large && <div className="App">
         <div
           id="navbar"
           style={{
@@ -233,6 +245,10 @@ function App() {
           <Contact />
         </section>
       </div>
+      }
+            </>
+      )}
+    </Media>
     </>
   );
 }

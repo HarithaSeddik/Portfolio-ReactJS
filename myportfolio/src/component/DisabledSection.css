@@ -73,7 +73,7 @@ html, body {
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
     .disabledSectionContainer{
-        background-color:rebeccapurple ;
+        /* background-color:rebeccapurple ; */
         background: url('../images/bluecollar_dancing.gif'), rgb(104, 102, 102);
         background-blend-mode:multiply;
         background-position: center;
@@ -96,10 +96,10 @@ html, body {
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 992px) and (min-height:1200px) {
     .disabledSectionContainer{
-        background:violet ;
-        /* background: url('../images/bluecollar_dancing.gif'), rgb(104, 102, 102);
+        /* background:violet ; */
+        background: url('../images/bluecollar_dancing.gif'), rgb(104, 102, 102);
         background-blend-mode:multiply;
-        background-position: center; */
+        background-position: center;
        }
        .disabledSectionContainer .messageContainer{
            color: white;
