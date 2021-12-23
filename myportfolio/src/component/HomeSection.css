@@ -56,10 +56,14 @@
 .socialLinksUL {
     display: flex;
     position: absolute;
-    width: 400px;
+    gap: 1vw;
+    width: 20vw;
     top: 80%;
     left: 50%;
     margin-left: -200px;
+    align-items: center;
+    justify-content: center;
+    /* background: coral; */
     /* transform: translate(-50%, -50%); */
   }
   

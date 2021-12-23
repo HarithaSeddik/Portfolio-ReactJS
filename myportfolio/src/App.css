@@ -8,6 +8,7 @@
   --fontFam : 'Playfair Display', serif;
   /* --orangeLight:#e16328af;  */
 }
+<<<<<<< HEAD
 
 body,html{
   
@@ -46,6 +47,54 @@ html::-webkit-scrollbar{
 .detailsDiv{
   height: 50vh;
   /* height: 50%; */
+=======
+/* Hide scrollbar for Chrome, Safari and Opera */
+.example::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.example {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+body,html{
+  
+  /* scroll-snap-type: y mandatory; */
+  -ms-overflow-style: none;  /*IE and Edge*/
+  scrollbar-width: none;  /* Firefox */
+  background-color: var(--black);
+  width: 100vw;
+  /* overflow:auto */
+  /* scroll-padding-top: 10vh; */
+}
+body::-webkit-scrollbar{
+  display: none;
+}
+html::-webkit-scrollbar{
+  display: none;
+  
+}
+.App{
+  /* background-color: #1a1a1afd ;
+   */
+   background-color: var(--black);
+}
+.roleTitle{
+  color: var(--orange);
+  font-weight:inherit;
+  font-weight: 900;
+  font-size: 2rem;
+  
+}
+.titleDiv{
+  height: auto;
+  /* height: 50%; */
+}
+.detailsDiv{
+  height: fit-content;
+  height: 55vh;
+>>>>>>> revisit_first_commit
   /* height: 450px; */
   width: 100%;
   
@@ -80,7 +129,11 @@ html::-webkit-scrollbar{
   
   width: 45%;
   /* margin-top: 5%; */
+<<<<<<< HEAD
   padding-top: 1%;
+=======
+  padding-top: 4vh;
+>>>>>>> revisit_first_commit
   /* padding-bottom: 3%; */
   padding-bottom: 50px;
   
@@ -209,9 +262,13 @@ html::-webkit-scrollbar{
   top: 35%;
   position:relative;
   color: rgba(177, 25, 25, 0.932);
+<<<<<<< HEAD
   /* background-color: silver; */
   /* top: 10%; */
   /* left: 30%; */
+=======
+  
+>>>>>>> revisit_first_commit
 }
 .linkContainer{
   display: flex;
@@ -225,6 +282,7 @@ html::-webkit-scrollbar{
   cursor: pointer;
 }
 .mediaContainer{
+<<<<<<< HEAD
   /* display: flex; */
   /* align-content: center; */
   /* justify-content: center; */
@@ -239,6 +297,11 @@ html::-webkit-scrollbar{
   /* position: relative; */
   text-decoration:none;
   /* z-index: 999; */
+=======
+ 
+  height: 100%;
+  text-decoration:none;
+>>>>>>> revisit_first_commit
   display: flex;
   
   
@@ -304,6 +367,7 @@ html::-webkit-scrollbar{
   }
 } */
 
+<<<<<<< HEAD
 @media only screen and (min-width:1700px) {
   .detailsPic{
     margin-top: 2vh;
@@ -313,13 +377,39 @@ html::-webkit-scrollbar{
   .videoWrapper{
     height: 400px;
     width: 400px;
+=======
+@media only screen and (min-width:1360px) {
+  .detailsPic{
+    margin-top: 4vh;
+    height: 45vh;
+  }
+
+  .videoWrapper{
+    height: 45vh;
+    width: 45vh;
+>>>>>>> revisit_first_commit
     
     top: 30%;
     margin-top: 4vh;
   }
   .videoContainer{
     position: relative;
+<<<<<<< HEAD
     height: 400px;
     width: 400px;
+=======
+    height: 45vh;
+    width: 45vh;
+  }
+
+  .youtubeButton{
+    width: fit-content;
+    height: 10%;
+    align-content: center;
+    font-size: 0.6em;
+    
+    margin-top: 30%;
+    left: 0%;
+>>>>>>> revisit_first_commit
   }
 }
