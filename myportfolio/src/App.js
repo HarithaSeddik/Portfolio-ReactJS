@@ -1,20 +1,4 @@
 import "./App.css";
-<<<<<<< HEAD
-import { useState, useEffect } from "react";
-import HomeSection from "./component/HomeSection";
-
-
-function App() {
-  
-  const [snapScroll, setSnapScroll] = useState(true);
-  return (
-    <div className="App">
-
-      <section id="home">
-        <HomeSection />
-      </section>
-     
-=======
 import HomeSection from "./component/HomeSection";
 import Navbar from "./component/Navbar";
 import Cursor from "./component/Cursor";
@@ -67,7 +51,6 @@ const titleDiv = (id, txt1, txt2, txt3, imageSrc) => {
           </div>
         </div>
       </Parallax>
->>>>>>> revisit_first_commit
     </div>
   );
 };
@@ -210,10 +193,63 @@ function App() {
 
   return (
     <>
-    <Cursor />
+    <Cursor/>
+    <Media queries = {{
+       small: "(max-width: 599px)",
+       medium: "(min-width: 600px) and (max-width: 1199px)",
+       large: "(min-width: 1200px)"
+    }}>
+    {matches => ( 
+      <>
+      {matches.small && <DisabledSection/> }
+      {matches.medium && <DisabledSection/>}
+      {matches.large && <div className='App'>
+        
+        
+    <div
+          id="navbar"
+          style={{
+            top: "0%",
+            position: "fixed",
+            zIndex: "999",
+            width: "100%",
+            height: "8vh",
+          }}
+          >
+          <Navbar showBackground={showNavBackground} />
+        </div>
+        {showButton && (
+          <div onClick={handleTopClick}>
+            <BackToTop />
+          </div>
+        )}
+         <section id="home" style={{ scrollSnapAlign: "start" }}>
+          <HomeSection />
+        </section>
+        <section id="aboutMe" style={{ scrollSnapAlign: "start" }}>
+          <AboutSection />
+        </section>
+        <section id="experiences" className="experiencesContainer">
+          {jsonData.experiences.map((experience, i) => (
+            <>{experienceDiv(experience.id)}</>
+            ))}
+        </section>
+
+        <section id="skills" style={{ scrollSnapAlign: "start" }}>
+          <Skills />
+        </section>
+
+        <section id="contact" style={{ scrollSnapAlign: "start" }}>
+          <Contact />
+        </section>
+        </div>}
+      </>
+    )}
+        </Media>
+    {/* <Cursor />
      <Media queries={{
-          small: "(max-width: 599px)",
-          medium: "(min-width: 600px) and (max-width: 1199px)",
+       small: "(max-width: 599px)",
+       medium: "(min-width: 600px) and (max-width: 1199px)",
           large: "(min-width: 1200px)"
         }}>
       {matches => (
@@ -263,8 +299,9 @@ function App() {
       }
             </>
       )}
-    </Media>
-    </>
+    </Media>*/
+  }
+    </> 
   );
 }
 

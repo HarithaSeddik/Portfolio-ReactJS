@@ -1,7 +1,7 @@
 import "./AboutSection.css";
 import aboutPic from "../images/aboutPic2.jpg";
 import { Link } from "react-scroll";
-import resume from "../docs/myResume_v2.pdf";
+import resume from "../data/Resume.pdf";
 import { ExternalLink } from 'react-external-link';
 
 const AboutSection = () => {
