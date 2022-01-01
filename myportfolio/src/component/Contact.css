@@ -67,8 +67,8 @@
   /* grid-template-columns: repeat(2,auto); */
   justify-content: center;
   width: 11vw;
-  height: 8vh;
-  /* align-content: center; */
+  height: 6vh;
+  align-content: center;
   font-size: 1vw;
   background-color: transparent;
   margin-top: 4%;
@@ -85,7 +85,13 @@
   border-radius: 3%;
   margin-bottom: 5%;
 }
+.locationButton p{
+    position: relative;
+    top: 5%;
+    justify-content: center;
+}
 .locationButton .fa-map-marker-alt{
+    position: relative;
     font-size: 2em;
     padding-top: 5%;
 }

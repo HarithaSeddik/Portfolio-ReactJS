@@ -26,8 +26,8 @@ const AboutSection = () => {
           </h5>
           <p className="aboutParagraph">
             {" "}
-            I am a fullstack web developer that has worked extensively with {" "}
-            <span>React.Js</span> and skilled at multiple backend
+            I am a fullstack developer that has worked extensively with {" "}
+            <span>Flutter</span> (Mobile) & <span> React.Js</span> and skilled at multiple backend
             frameworks including <span>Python</span> and <span>NodeJs</span>.
             <br />
             <br />I am fluent in <span>English, Turkish,</span> and{" "}
@@ -36,7 +36,7 @@ const AboutSection = () => {
             <br />
             In my free time I like to take on side projects that challenge my
             skills.
-            <br />
+            <br /><br />
             You can find the source code for  <span>
               {" "}
               <ExternalLink href='https://github.com/HarithaSeddik/Portfolio-ReactJS/' target='_blank'>
@@ -59,19 +59,19 @@ const AboutSection = () => {
           </p>
           <ul className="aboutList">
             <li>
-              <h4>Email</h4> <h5>{" |\b\b"}akkad.haritha@gmail.com</h5>
+              <h4>Email</h4> <h5>| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; akkad.haritha@gmail.com</h5>
             </li>
 
             <li>
-              <h4> Phone</h4> <h5>{" |\b\b"}+905538033898</h5>
+              <h4> Phone</h4> <h5>{" | "} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+905538033898</h5>
             </li>
 
             <li>
-              <h4>Address</h4> <h5>{" |\b\b"}Ankara, Turkey</h5>
+              <h4>Address</h4> <h5>{" |"}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Istanbul, Turkey</h5>
             </li>
 
             <li>
-              <h4> Freelance</h4> <h5>{" |\b\b"}Available</h5>
+              <h4> Freelance</h4> <h5>{" |"}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Available</h5>
             </li>
           </ul>
           <div className="downloadResumeButton">

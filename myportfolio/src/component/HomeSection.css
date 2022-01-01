@@ -54,17 +54,15 @@
 
 
 .socialLinksUL {
+  /* background-color: rebeccapurple; */
     display: flex;
     position: absolute;
-    gap: 1vw;
-    width: 20vw;
+    margin: 0;
+    padding: 0;
+    width: fit-content;
+    transform: translate(-50%,50%);
     top: 80%;
     left: 50%;
-    margin-left: -200px;
-    align-items: center;
-    justify-content: center;
-    /* background: coral; */
-    /* transform: translate(-50%, -50%); */
   }
   
 .socialLinksUL li {

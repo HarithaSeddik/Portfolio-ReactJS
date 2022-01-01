@@ -85,14 +85,14 @@ html::-webkit-scrollbar{
 }
 
 .detailsList{
-  
+
   width: 45%;
   /* margin-top: 5%; */
   padding-top: 4vh;
   /* padding-bottom: 3%; */
   padding-bottom: 50px;
-  
-  font-size: 0.8vw;
+  justify-content: center;
+  font-size: 0.9vw;
   grid-gap: 0.5vw;
   display: flex;
   /* height: 100%; */

@@ -8,10 +8,10 @@ import { icon } from '@fortawesome/fontawesome-svg-core'
 const Skills = () => {
 
     const iconArray=[{'iconName':"devicon-react-original colored",'hover': 'ReactJS'} ,
+    {'iconName':"devicon-flutter-plain colored",'hover':'Flutter'},
     {'iconName':"devicon-javascript-plain colored",'hover':'JavaScript'},
     {'iconName':"devicon-nodejs-plain colored",'hover':'NodeJs'},
     {'iconName':"devicon-python-plain colored",'hover':'Python'},
-    {'iconName':"devicon-linux-plain",'hover':'Linux'},
     {'iconName':"devicon-mysql-plain colored",'hover':'MySQL'},
                     {'iconName':"devicon-materialui-plain colored",'hover':'MaterialUI'},
                     {'iconName':"devicon-git-plain",'hover':'Git'},
@@ -83,6 +83,9 @@ const Skills = () => {
                 <ul >
                     <li>
                         <h3>Develop highly interactive Front end / User Interfaces for your web applications</h3>
+                    </li>
+                    <li>
+                        <h3>Cross-platform mobile app development with native performance </h3>
                     </li>
                     <li>
                         <h3> Integration of third party services such as Firebase/ CommerceJS/ Stripe </h3>

@@ -6,6 +6,7 @@ const HomeSection = () => {
     const textArray =[
         'a Software Developer',
         'a Web Developer',
+        'a Mobile Developer',
         'an Engineer'
 ]
     const TypingAnimation =  React.memo(()=>{

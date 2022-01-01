@@ -39,7 +39,7 @@ const titleDiv = (id, txt1, txt2, txt3, imageSrc) => {
     <div className="titleDiv">
       <Parallax
         bgImage={titleImage}
-        bgImageStyle={{ height: "1000px", width: "100%", opacity: "1" }}
+        bgImageStyle={{ height: `1000px`, width: "100%", opacity: "1" }}
         strength={400}
         style={{height:'45vh'}}
       >
@@ -61,27 +61,27 @@ const detailsDiv = (id, txt1, txt2, txt3, txt4, txt5, imageSrc, outLink) => {
         <li className="listItem1">
           <h3> {txt1}</h3>
         </li>
-        <li className="listItem2">
+       {txt2?  <li className="listItem2">
           <h3> {txt2}</h3>
-        </li>
-        <li className="listItem3">
+        </li> : <></> }
+        {txt3? <li className="listItem3">
           <h3> {txt3}</h3>
-        </li>
-        <li className="listItem4">
+        </li> : <> </>}
+       {txt4?  <li className="listItem4">
           <h3> {txt4} </h3>
-        </li>
-        <li style={{ wordSpacing: "0.8em" }} className="listItem5">
+        </li> : <> </>}
+        { txt5?  <li style={{ wordSpacing: "0.8em" }} className="listItem5">
           {" "}
           <h3> {txt5} </h3>
-        </li>
+        </li> : <> </> }
       </ul>
 
       <div className="detailsRightSection">
-        {id == 0 && (
+        {id <2 && (
           <img src={require(`${imageSrc}`).default} className="detailsPic" />
         )}
 
-        {id != 0 && (
+        {(id > 1 ) && (
           <div className="mediaContainer">
             <div className="videoWrapper">
               <div
@@ -91,11 +91,11 @@ const detailsDiv = (id, txt1, txt2, txt3, txt4, txt5, imageSrc, outLink) => {
                     `url(${require(`${imageSrc}`).default})`,
                 }}
               >
-                {(id == 2 || id == 3 || id == 1) && (
+                {(id == 2 || id == 3 || id == 4) && (
                   <ExternalLink className="linkContainer" href={outLink}>
                     <button className="youtubeButton">
-                      <p> {id == 1 ? "Visit Website!" : "Watch Me!"} </p>
-                      {id != 1 && <i className="fa fa-youtube-play"> </i>}
+                      <p> {id == 2 ? "Visit Website!" : "Watch Me!"} </p>
+                      {id == 3 && <i className="fa fa-youtube-play"> </i>}
                     </button>
                   </ExternalLink>
                 )}
@@ -204,7 +204,6 @@ function App() {
       {matches.small && <DisabledSection/> }
       {matches.medium && <DisabledSection/>}
       {matches.large && <div className='App'>
-        
         
     <div
           id="navbar"

@@ -103,7 +103,7 @@ const Contact = () => {
                 <h3> Want to discuss a project or just chat? Just leave me a message!</h3>
                 
                 <button className='locationButton'>
-                <p> Ankara, Turkey </p>
+                <p> Istanbul, Turkey </p>
                 <i className="fas fa-map-marker-alt"></i>
                 </button>
                 <ul className='socialLinksUL'>

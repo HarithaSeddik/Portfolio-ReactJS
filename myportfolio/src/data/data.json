@@ -2,20 +2,32 @@
     "experiences":[  
         {
             "id":0,
-            "title-text1":"Software Developer - Enekom Energy",
-            "title-text2":"09/2020 - PRESENT ",
-            "title-text3":"Ankara, Turkey",
-            "title-imageSrc":"./images/software-developer2.jpg",
-            "details-text1": "Developed multiple desktop test tools, collecting sensor values from microcontroller based devices set on high-speed railway systems",
-            "details-text2": "Built a remote testing platform through Ubuntu Server on RaspberryPi ",
-            "details-text3": "Using C, built multiple Arduino/ RaspberryPi based testing apparatuses for product shelf testing",
-            "details-text4": "Wrote database management, and communication protocol classes using Python's Sqlite3 and Socket libraries",
-            "details-text5": "Python | Sqlite3 | MSSQL | JScript | PyQt5 | Git | Linux",
-            "details-imageSrc": "./images/pp1.png",
+            "title-text1":"Flutter Developer - Kobil GmbH",
+            "title-text2":"11/2021 - PRESENT ",
+            "title-text3":"Istanbul, Turkey",
+            "title-imageSrc":"./images/kobil_bg.jpeg",
+            "details-text1": "Flutter development team working on Istanbul Senin Project for the municipality of Istanbul",
+            "details-text2": "Project lead for trusted verification app used by banking systems across Europe",
+            "details-text5": "Flutter | Dart | Firebase | CI/CD | Mobile Development",
+            "details-imageSrc": "./images/ibb_crop.png",
             "details-href": ""
         },
         {
             "id":1,
+            "title-text1":"Software Developer - Enekom Energy",
+            "title-text2":"09/2020 - 10/2021 ",
+            "title-text3":"Ankara, Turkey",
+            "title-imageSrc":"./images/software-developer2.jpg",
+            "details-text1": "Developing Python desktop test tools, data processing with microcontroller based devices",
+            "details-text2": "Remote testing platform through Ubuntu Server on RaspberryPi ",
+            "details-text3": "Arduino/ RaspberryPi based testing apparatuses for product shelf testing",
+            "details-text4": "Wrote database management, and communication protocols with Python",
+            "details-text5": "Python | Sqlite3 | MSSQL | JScript | Linux",
+            "details-imageSrc": "./images/onrailway2.png",
+            "details-href": ""
+        },
+        {
+            "id":2,
             "title-text1":"E-commerce Bookstore Website - ReactJS",
             "title-text2":"",
             "title-text3":"",
@@ -24,38 +36,25 @@
             "details-text3": "Functioning store backend handled by headless eCommerce API (commerceJS)",
             "details-text2": "Utilized Material-UI Frontend framework ",
             "details-text4": "Implemented functional payment form backend handled by Stripe's headless API ",
-            "details-text5": "ReactJS | Javascript | MaterialUi | API-Querying | React-Hook-Forms",
+            "details-text5": "ReactJS | Javascript | MaterialUi | RESTful API",
             "details-imageSrc": "./images/bookstore_gif2.gif",
             "details-href": "https://examplebookstore.netlify.app/"
 
         },
         {
-        "id":2,
+        "id":3,
         "title-text1":"Development of a Hunter Drone Platform- Meteksan Savunma",
         "title-text2":"09/2019 - 06/2020 ",
         "title-text3":"Ankara, Turkey",
         "title-imageSrc":"./images/droneCamera3.jpg",
-        "details-text1": "Project lead (Senior Year Graduation Project) for a team of engineers to develop a hunter-drone platform to neutralize malicious drones",
-        "details-text3": "Developed Object-recognition and tracking code using Python's OpenCV fed by a video stream powered by a Jetson NANO",
+        "details-text1": "Project lead (Graduation Project) to develop a hunter drone to neutralize malicious drones",
         "details-text2": "Sponsored by Meteksan SAVUNMA",
-        "details-text4": "Used feedback from the video-stream to control servo-motors for stabilizing the camera's gimbal",
-        "details-text5": "Python | OpenCV | Object-Tracking | Gimbal-Control | Arduino",
+        "details-text3": "Object-detection and tracking using Python's OpenCV - Jetson NANO",
+        "details-text4": "Servo motor control for camera gimbal stabilization.",
+        "details-text5": "Python | OpenCV | Object-Tracking | Gimbal-Control | C",
         "details-imageSrc": "./images/objRecVid2.gif",
         "details-href": "https://www.youtube.com/watch?v=UcJCYKdf6GM"
-    }, {
-        "id":3,
-        "title-text1":"Gap Closing Mechatronic Robot",
-        "title-text2":"Bilkent University - 2019",
-        "title-text3":"",
-        "title-imageSrc":"./images/robotpic2.jpg",
-        "details-text1": "Project lead for developing a gap-crossing robot",
-        "details-text2": "Placed 2nd in Competition - Mechatronic Systems (2019)",
-        "details-text3": "Programmed PIC microcontroller in C",
-        "details-text4": "PWM control of DC motors with feedback from UV sensors",
-        "details-text5": "PIC | C | Arduino | PWM Control",
-        "details-imageSrc": "./images/mechatronicsRobot2.gif",
-        "details-href": "https://www.youtube.com/watch?v=HMMgDVDKDpc"
-    }
+    } 
     
-    ]
+]
 }

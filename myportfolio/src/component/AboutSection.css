@@ -66,10 +66,12 @@
 }
 
 .aboutParagraph{
+    /* background-color: red; */
+    width: 26vw;
     text-align: justify;
-    font-size: 1.0vw;
+    font-size: 0.94vw;
     line-height: 120%;
-    color: rgb(180, 177, 177);
+    color: rgb(220, 220, 220);
     
 }
 .aboutParagraph .gitHubLink{
@@ -92,13 +94,14 @@
 }
 .aboutList li{
     /* padding-top: 10px; */
-    width: 450px;
+    /* background-color: royalblue; */
+    width: 24vw;
     display: grid;
     
     align-content: center;
     /* justify-content: center; */
-    height: 3.0vh;
-    grid-template-columns: 30% 60%;
+    height: 3.5vh;
+    grid-template-columns: 30% 50%;
     /* background: rebeccapurple; */
 }
 
