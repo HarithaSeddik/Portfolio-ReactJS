@@ -16,11 +16,13 @@ const HomeSection = () => {
         steps={
             [   
                 'a Software Developer',
-                1500, 
+                1200, 
                 'a Web Developer',
-                1500, 
+                1200, 
+                'a Mobile Developer',
+                1200,
                 'an Engineer',
-                1500,
+                1200,
                 
             ]
         }
