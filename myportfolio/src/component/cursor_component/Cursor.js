@@ -1,5 +1,3 @@
-
-import { yellow } from '@material-ui/core/colors';
 import React from 'react'
 import './Cursor.css'
 
@@ -26,9 +24,6 @@ const Cursor = (bigScreen) => {
       
       setMousePosition({ x, y });
       positionDot(event);
-      // const eventDoc = (event.target && event.target.ownerDocument) || document;
-      // const doc = eventDoc.documentElement;
-      // const body = eventDoc.body;
       var t= event.clientY;
       var w = event.clientX
       const totalWidth = window.screen.width

@@ -1,8 +1,7 @@
-import React from 'react'
 import './Skills.css'
-import gif from '../images/programmergif3.gif'
-import {Grid,Box} from '@material-ui/core'
-import { icon } from '@fortawesome/fontawesome-svg-core'
+import gif from '../../../images/programmergif3.gif'
+import {Grid} from '@material-ui/core'
+
 
 
 const Skills = () => {

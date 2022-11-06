@@ -10,8 +10,6 @@
     transition: ease all 0.5s;
 }
 .backToTopButton:hover{
-    /* font-size: 10em; */
-    /* color: #e16328be; */
     color: var(--orange);
     cursor: pointer;
     transition: ease all 0.5s;

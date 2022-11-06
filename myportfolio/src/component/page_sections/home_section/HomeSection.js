@@ -1,7 +1,7 @@
 import React from 'react'
 import './HomeSection.css'
 import Typical from 'react-typical'
-import backgroundPic from '../images/homeImage.jpeg'
+import backgroundPic from '../../../images/homeImage.jpeg'
 const HomeSection = () => {
     const textArray =[
         'a Software Developer',

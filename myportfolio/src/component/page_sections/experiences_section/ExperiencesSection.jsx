@@ -2,9 +2,8 @@ import { Parallax } from "react-parallax";
 import { ExternalLink } from "react-external-link";
 import "./ExperiencesSection.css";
 import { experiencesData } from "./ExperiencesData";
-// import testImage from "../../../../public/images/";
+
 const inlineStyle = {
-  // background: '#fff',
   background: "transparent",
   color: "white",
   left: "50%",
@@ -12,7 +11,6 @@ const inlineStyle = {
   position: "absolute",
   padding: "20px",
   transform: "translate(-50%, -50%)",
-  // fontSize:'40px',
   alignContent: "center",
   textAlign: "center",
   textTransform: "uppercase",
@@ -24,7 +22,6 @@ const inlineStyle = {
 };
 
 const titleDiv = (id, txt1, txt2, txt3, imageSrc) => {
-  // const titleImage = `${require(`${imageSrc}`).default}`;
   const titleImage = imageSrc;
   return (
     <div className="titleDiv">
@@ -46,9 +43,6 @@ const titleDiv = (id, txt1, txt2, txt3, imageSrc) => {
   );
 };
 const detailsDiv = (id, txt1, txt2, txt3, txt4, txt5, imageSrc, outLink) => {
-  console.log(`details image source: ${imageSrc}`);
-  // const myImageSrc = require(`${imageSrc}`).default;
-  // console.log(`required details image source: ${imageSrc}`);
   return (
     <div className="detailsDiv">
       <ul className="detailsList">
@@ -87,10 +81,7 @@ const detailsDiv = (id, txt1, txt2, txt3, txt4, txt5, imageSrc, outLink) => {
       </ul>
 
       <div className="detailsRightSection">
-        {id < 2 && (
-          // <img src={require(`${imageSrc}`).default} className="detailsPic" />
-          <img src={imageSrc} className="detailsPic" />
-        )}
+        {id < 2 && <img src={imageSrc} className="detailsPic" />}
 
         {id > 1 && (
           <div className="mediaContainer">
@@ -121,7 +112,6 @@ const detailsDiv = (id, txt1, txt2, txt3, txt4, txt5, imageSrc, outLink) => {
 const experienceDiv = (experienceJson) => {
   console.log(experienceJson);
   return (
-    // <div className={snapScroll? 'experienceContainer': 'experienceContainer--nosnap'}>
     <div style={{ scrollSnapAlign: "start" }}>
       {titleDiv(
         experienceJson["id"],

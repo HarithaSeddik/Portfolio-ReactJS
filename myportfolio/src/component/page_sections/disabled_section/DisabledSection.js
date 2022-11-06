@@ -1,5 +1,3 @@
-import React from 'react'
-import { Typography } from '@material-ui/core'
 import './DisabledSection.css'
 const DisabledSection = () => {
     return (

@@ -1,160 +1,122 @@
-.aboutSectionContainer{
-    height: 100vh;
-    background: var(--black);
-    display: grid;
-    grid-template-columns: 33% 67%;
-    
+.aboutSectionContainer {
+  height: 100vh;
+  background: var(--black);
+  display: grid;
+  grid-template-columns: 33% 67%;
+}
+.leftSection {
+  background: var(--grey);
+}
+.aboutPic {
+  position: relative;
+  top: 12vh;
+  left: 55%;
+  height: 40vw;
+  border: 10px solid #2e2e33;
+  transition: ease all 0.5s;
+}
+.aboutPic:hover {
+  transform: scale(1.01);
+  transition: ease all 0.5s;
 }
 
-
-.leftSection{
-    /* background: #1e1e22; */
-    background: var(--grey);
-    
+.rightSection {
+  background: var(--black);
 }
-.aboutPic{
-    
+
+.aboutTextDiv {
+  font-family: "Playfair Display", serif;
+  line-height: 0.5em;
+
+  color: rgb(226, 223, 223);
+
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  align-content: center;
+  width: 35vw;
+  left: 36%;
+  top: 13vh;
+  font-size: 1.5rem;
+  font-family: "Playfair Display", serif;
+  position: relative;
+}
+.aboutTextDiv span {
+  color: var(--orangeLight);
+}
+
+.aboutParagraph {
+  width: 26vw;
+  text-align: justify;
+  font-size: 0.94vw;
+  line-height: 120%;
+  color: rgb(220, 220, 220);
+}
+.aboutParagraph .gitHubLink {
+  color: var(--orangeLight);
+  text-decoration: none;
+}
+.skillsLink {
+  text-decoration: none;
+}
+.skillsLink:hover,
+.gitHubLink:hover {
+  cursor: pointer;
+}
+
+.aboutList {
+  list-style: none;
+  line-height: 120%;
+  font-size: 0.7em;
+  padding: 0;
+  padding-top: 20px;
+}
+.aboutList li {
+  width: 24vw;
+  display: grid;
+  align-content: center;
+  height: 3.5vh;
+  grid-template-columns: 30% 50%;
+}
+
+.aboutList li h4 {
+  font-size: 0.8em;
+}
+.aboutList li h5 {
+  font-size: 0.8em;
+  color: rgb(180, 177, 177);
+}
+
+.downloadResumeButton {
+  font-size: 0.7em;
+  background: var(--orangeLight);
+  width: fit-content;
+  height: fit-content;
+  padding: 15px 20px;
+  margin-top: 7%;
+  border-radius: 0%;
+  transition: ease all 0.5s;
+}
+.downloadResumeButton a {
+  text-decoration: none;
+  color: white;
+}
+.downloadResumeButton a:hover {
+  cursor: pointer;
+}
+.downloadResumeButton:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  transition: ease all 0.5s;
+}
+
+@media only screen and (min-width: 1700px) {
+  .aboutPic {
     position: relative;
-    /* height: 85vh; */
-    top: 12vh;
+    top: 11vh;
     left: 55%;
-    height: 40vw;
-    /* width: 31vw; */
-    /* transform: translate(60%,10%); */
+    height: 41vw;
     border: 10px solid #2e2e33;
     transition: ease all 0.5s;
-}
-.aboutPic:hover{
-    transform: scale(1.01);
-    /* border-radius: 5%; */
-    transition: ease all 0.5s;
-}
-
-.rightSection{
-    /* background: #17171b;
-     */
-    background: var(--black);
-}
-
-.aboutTextDiv{
-    font-family: 'Playfair Display', serif;
-    line-height: 0.5em;
-
-    color: rgb(226, 223, 223);
-    
-    display: flex;
-    flex-direction: column;
-    text-align:justify;
-    align-content: center;
-    width: 35vw;
-    /* transform: translate(85%,50%); */
-    left:36%;
-    top: 13vh;
-    /* margin-left: -160px; */
-    font-size: 1.5rem;
-    font-family:  'Playfair Display', serif;
-    position: relative;
-    /* background:violet; */
-    /* line-height:0px; */
-    
-    
-    
-}
-.aboutTextDiv span{
-    color:var(--orangeLight);
-    
-}
-
-.aboutParagraph{
-    /* background-color: red; */
-    width: 26vw;
-    text-align: justify;
-    font-size: 0.94vw;
-    line-height: 120%;
-    color: rgb(220, 220, 220);
-    
-}
-.aboutParagraph .gitHubLink{
-    color:var(--orangeLight);
-    text-decoration: none;
-}
-.skillsLink{
-    text-decoration: none;
-}
-.skillsLink:hover, .gitHubLink:hover{
-    cursor: pointer;
-}
-
-.aboutList{
-    list-style: none;
-    line-height: 120%;
-    font-size: 0.7em;
-    padding: 0;
-    padding-top: 20px;
-}
-.aboutList li{
-    /* padding-top: 10px; */
-    /* background-color: royalblue; */
-    width: 24vw;
-    display: grid;
-    
-    align-content: center;
-    /* justify-content: center; */
-    height: 3.5vh;
-    grid-template-columns: 30% 50%;
-    /* background: rebeccapurple; */
-}
-
-.aboutList li h4{
-    font-size: 0.8em;
-}
-.aboutList li h5{
-    font-size: 0.8em;
-    color:rgb(180, 177, 177) ;
-}
-
-.downloadResumeButton{
-    font-size: 0.7em;
-    background: var(--orangeLight);
-    width: fit-content;
-    height: fit-content;
-    padding: 15px 20px;
-    margin-top:7%;
-    border-radius: 0%;
-    transition: ease all 0.5s;
-}
-.downloadResumeButton a{
-    text-decoration: none;
-    color: white;
-}
-.downloadResumeButton a:hover{
-    cursor: pointer;
-}
-.downloadResumeButton:hover{
-    cursor: pointer;
-    transform: scale(1.2);
-    transition: ease all 0.5s;
-}
-
-@media only screen and (min-width: 1700px){
-    .aboutTextDiv{
-       
-        
-        
-        
-    }
-
-    .aboutPic{
-    
-        position: relative;
-        /* height: 85vh; */
-        top: 11vh;
-        left: 55%;
-        height: 41vw;
-        /* width: 31vw; */
-        /* transform: translate(60%,10%); */
-        border: 10px solid #2e2e33;
-        transition: ease all 0.5s;
-    }
-    
+  }
 }
