@@ -1,14 +1,14 @@
 export const experiencesData = [  
     {
         "id":0,
-        "title-text1":"Flutter Developer - Kobil GmbH",
+        "title-text1":"Mobile Software Developer - Kobil GmbH",
         "title-text2":"11/2021 - PRESENT ",
         "title-text3":"Istanbul, Turkey",
         "title-imageSrc":require("../../../images/kobil_bg.jpeg").default,
-        "details-text1": "Developed critical features, and refactored code on ‘Istanbul Senin’ SuperApp used by hundreds of thousands of users (partnered with Istanbul Municipality)",
-        "details-text2": "Experience in CRM tools SDK integration, Firebase messaging integration",
-        "details-text3": "Commercial experience in multiple SuperApps development, ‘MiniProgram’ development, and interactive webviews",
-        "details-text4": "Perfect understanding and implementation of BLOC/Cubit state management architecture",
+        "details-text1": "Developed critical features, and refactored code on Turkey's first SuperApp project used by millions of users. ",
+        "details-text2": "Experience in SDK Integration, unit testing, Firebase messaging, Gitlab pipelines. ",
+        "details-text3": "Building and managing CI/CD Pipelines on Gitlab and TeamCity for AppCenter and Google/App Store releases. ",
+        "details-text4": "Perfect understanding and implementation of Bloc/Cubit state management , MVVM architecture, and dependency injection.",
         "details-text5": "Flutter | Firebase | CI/CD | REST | BLOC | MethodChannels",
         "details-imageSrc": require("../../../images/ibb_crop.png").default,
         "details-href": ""

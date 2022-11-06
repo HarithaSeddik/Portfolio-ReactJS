@@ -1,172 +1,161 @@
-.roleTitle{
-    color: var(--orange);
-    font-weight:inherit;
-    font-weight: 900;
-    font-size: 2rem;
-    
-  }
-  .titleDiv{
-    height: auto;
-  }
-  .detailsDiv{
-    height: fit-content;
-    height: 55vh;
-    width: 100%;
-    
-    display: grid;
-    display: flex;
-    grid-template-columns: 55% 25%;
-    align-content: center;
-    justify-content: center;
-    background: var(--black);
-    gap:inherit
-    
-    
-  }
-  .detailsRightSection{
-    position: relative;
-    height: 100%;
-  }
-  .detailsPic{
-    margin-top: 5%;
-    height: 370px;
-  }
-  
-  .detailsList{
-  
-    width: 45%;
-    padding-top: 4vh;
-    padding-bottom: 50px;
-    justify-content: center;
-    font-size: 0.9vw;
-    grid-gap: 0.5vw;
-    display: flex;
-    padding-right: 10%;
-    margin: 0;
-    flex-direction: column;
-    color:white;
-  }
-  
-  .detailsList li {
-    position: relative;
-    width: fit-content;
-    list-style: none;
-    transition: all .4s ease; }
-    .detailsList li:before {
-      content: "";
-      position: absolute;
-      top:50%;
-      margin-top: -25px;
-      left: -20px;
-      display: block;
-      border-radius: 28px;
-      background:#d6913791;
-      width: 50px;
-      height: 50px;
-      transition: all .5s ease; }
-    .detailsList li h3 {
-      font-family:  'Playfair Display', serif;
-      font-family: 'Saira Condensed', sans-serif;
-      position: relative;
-      font-weight: 900;
-      letter-spacing: .07em;
-      font-size: 1.3em;
-      vertical-align: middle; 
-    }
-    .detailsList li:hover:before {
-      height: 100%;
-      padding-left: 20px;
-      height: 80%;
-      padding-right: 20px;
-      margin-top: -5%;
-      width: 100%;
-      transition: all 0.9s ease;
-      background: var(--orangeLight);
-    
-    }
-    .detailsList li:last-child{
-      font-size: 1.2em;
-      letter-spacing: 0;
-      font-weight: bolder;
-    }
-      
-    
-  
-  .youtubeButton{
-    text-decoration:none;
-    display: grid;
-    grid-template-columns: repeat(2,auto);
-    justify-content: center;
-    width: 150px;
-    width: fit-content;
-    height: 10%;
-    align-content: center;
-    font-size: 0.6em;
-    margin-top: 10%;
-    left: 0%;
-    background-color: transparent;
-    color:var(--orangeLight);
-    padding: 8% 3em;
-    border: 2px solid var(--orangeLight);
-    transition: all 0.3 ease-out;
-    white-space: nowrap;
-  }
-  .youtubeButton:hover{
-    
-    cursor: pointer;
-    transition: all 0.3s ease-out;
-    background: var(--orangeLight);
-    color: var(--white);
-    transition: 250ms;
-  }
-  .fa-youtube-play{
-    margin-left: 50%;
-    top: 35%;
-    position:relative;
-    color: rgba(177, 25, 25, 0.932);
-    
-  }
-  .linkContainer{
-    display: flex;
-    margin-top: 75%;
-    max-width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-    text-decoration: none;
-  }
-  .fa-youtube-play:hover{
-    cursor: pointer;
-  }
-  .mediaContainer{
-   
-    height: 100%;
-    text-decoration:none;
-    display: flex;
-    
-    
-  }
-  .videoWrapper{
-    height: 360px;
-    width: 380px;
-    background:var(--grey);
-    top: 20%;
-    margin-top: 5%;
-    border-style: transparent;
-    border-radius: 50%;
-  }
-  .videoContainer{
-    position: relative;
-    height: 360px;
-    width: 380px;
-    background-position: center;
-    margin-top: 0%;
-    border-radius: 50%;
-    display: flex;
-    background-repeat: no-repeat;
-    border-style: solid;
-  }
-  .experiencesContainer{
-    height: 100%vh;
-    font-family:  'Playfair Display', serif;
-  }
-  
+.roleTitle {
+  color: var(--orange);
+  font-weight: inherit;
+  font-weight: 900;
+  font-size: 2rem;
+}
+.titleDiv {
+  height: auto;
+}
+.detailsDiv {
+  height: fit-content;
+  height: 55vh;
+  width: 100%;
+
+  display: grid;
+  display: flex;
+  grid-template-columns: 55% 25%;
+  align-content: center;
+  justify-content: center;
+  background: var(--black);
+  gap: inherit;
+}
+.detailsRightSection {
+  position: relative;
+  height: 100%;
+}
+.detailsPic {
+  margin-top: 5%;
+  height: 370px;
+}
+
+.detailsList {
+  width: 45%;
+  padding-top: 7vh;
+  padding-bottom: 50px;
+  justify-content: center;
+  font-size: 0.9vw;
+  grid-gap: 0.5vw;
+  display: flex;
+  padding-right: 10%;
+  margin: 0;
+  flex-direction: column;
+  color: white;
+}
+
+.detailsList li {
+  position: relative;
+  width: fit-content;
+  list-style: none;
+  transition: all 0.4s ease;
+}
+.detailsList li:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  margin-top: -25px;
+  left: -20px;
+  display: block;
+  border-radius: 28px;
+  background: #d6913791;
+  width: 50px;
+  height: 50px;
+  transition: all 0.5s ease;
+}
+.detailsList li h3 {
+  font-family: "Playfair Display", serif;
+  font-family: "Saira Condensed", sans-serif;
+  position: relative;
+  font-weight: 900;
+  letter-spacing: 0.07em;
+  font-size: 1.3em;
+  vertical-align: middle;
+}
+.detailsList li:hover:before {
+  height: 100%;
+  padding-left: 20px;
+  height: 80%;
+  padding-right: 20px;
+  margin-top: -5%;
+  width: 100%;
+  transition: all 0.9s ease;
+  background: var(--orangeLight);
+}
+.detailsList li:last-child {
+  font-size: 1.2em;
+  letter-spacing: 0;
+  font-weight: bolder;
+}
+
+.youtubeButton {
+  text-decoration: none;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  justify-content: center;
+  width: 150px;
+  width: fit-content;
+  height: 10%;
+  align-content: center;
+  font-size: 0.6em;
+  margin-top: 10%;
+  left: 0%;
+  background-color: transparent;
+  color: var(--orangeLight);
+  padding: 8% 3em;
+  border: 2px solid var(--orangeLight);
+  transition: all 0.3 ease-out;
+  white-space: nowrap;
+}
+.youtubeButton:hover {
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  background: var(--orangeLight);
+  color: var(--white);
+  transition: 250ms;
+}
+.fa-youtube-play {
+  margin-left: 50%;
+  top: 35%;
+  position: relative;
+  color: rgba(177, 25, 25, 0.932);
+}
+.linkContainer {
+  display: flex;
+  margin-top: 75%;
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  text-decoration: none;
+}
+.fa-youtube-play:hover {
+  cursor: pointer;
+}
+.mediaContainer {
+  height: 100%;
+  text-decoration: none;
+  display: flex;
+}
+.videoWrapper {
+  height: 360px;
+  width: 380px;
+  background: var(--grey);
+  top: 20%;
+  margin-top: 5%;
+  border-style: transparent;
+  border-radius: 50%;
+}
+.videoContainer {
+  position: relative;
+  height: 360px;
+  width: 380px;
+  background-position: center;
+  margin-top: 0%;
+  border-radius: 50%;
+  display: flex;
+  background-repeat: no-repeat;
+  border-style: solid;
+}
+.experiencesContainer {
+  height: 100%vh;
+  font-family: "Playfair Display", serif;
+}

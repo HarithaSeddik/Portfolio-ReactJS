@@ -42,7 +42,18 @@ const titleDiv = (id, txt1, txt2, txt3, imageSrc) => {
     </div>
   );
 };
-const detailsDiv = (id, txt1, txt2, txt3, txt4, txt5, imageSrc, outLink) => {
+const detailsDiv = (
+  id,
+  txt1,
+  txt2,
+  txt3,
+  txt4,
+  txt5,
+  txt6,
+  txt7,
+  imageSrc,
+  outLink
+) => {
   return (
     <div className="detailsDiv">
       <ul className="detailsList">
@@ -74,6 +85,22 @@ const detailsDiv = (id, txt1, txt2, txt3, txt4, txt5, imageSrc, outLink) => {
           <li style={{ wordSpacing: "0.8em" }} className="listItem5">
             {" "}
             <h3> {txt5} </h3>
+          </li>
+        ) : (
+          <> </>
+        )}
+        {txt6 ? (
+          <li style={{ wordSpacing: "0.8em" }} className="listItem6">
+            {" "}
+            <h3> {txt6} </h3>
+          </li>
+        ) : (
+          <> </>
+        )}
+        {txt7 ? (
+          <li style={{ wordSpacing: "0.8em" }} className="listItem6">
+            {" "}
+            <h3> {txt6} </h3>
           </li>
         ) : (
           <> </>
@@ -128,6 +155,8 @@ const experienceDiv = (experienceJson) => {
         experienceJson["details-text3"],
         experienceJson["details-text4"],
         experienceJson["details-text5"],
+        experienceJson["details-text6"],
+        experienceJson["details-text7"],
         experienceJson["details-imageSrc"],
         experienceJson["details-href"]
       )}
