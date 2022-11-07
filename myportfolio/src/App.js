@@ -1,148 +1,33 @@
 import "./App.css";
-import HomeSection from "./component/HomeSection";
-import Navbar from "./component/Navbar";
-import Cursor from "./component/Cursor";
-import jsonData from "./data/data.json";
-import { Parallax } from "react-parallax";
-import { ExternalLink } from "react-external-link";
-import AboutSection from "./component/AboutSection";
-import React, { useEffect, useState } from "react";
-import BackToTop from "./component/BackToTop";
-import Skills from "./component/Skills";
-import Contact from "./component/Contact";
+
+import  { useEffect, useState } from "react";
+
+
+
+
 import Media from "react-media";
-import DisabledSection from "./component/DisabledSection";
 
-const inlineStyle = {
-  // background: '#fff',
-  background: "transparent",
-  color: "white",
-  left: "50%",
-  top: "65%",
-  position: "absolute",
-  padding: "20px",
-  transform: "translate(-50%, -50%)",
-  // fontSize:'40px',
-  alignContent: "center",
-  textAlign: "center",
-  textTransform: "uppercase",
-  verticalAlign: "middle",
-  lineHeight: "20px",
-  fontWeight: "100",
-  letterSpacing: ".15em",
-  whiteSpace: "nowrap",
-};
+import ExperiencesSection from "./component/page_sections/experiences_section/ExperiencesSection";
+import DisabledSection from "./component/page_sections/disabled_section/DisabledSection";
+import Contact from "./component/page_sections/contact_section/Contact";
+import Cursor from "./component/cursor_component/Cursor";
+import Navbar from "./component/navbar/Navbar";
+import BackToTop from "./component/back_to_top_button/BackToTop";
+import HomeSection from "./component/page_sections/home_section/HomeSection";
+import AboutSection from "./component/page_sections/about_section/AboutSection";
+import Skills from "./component/page_sections/skills_section/Skills";
 
-const titleDiv = (id, txt1, txt2, txt3, imageSrc) => {
-  const titleImage = `${require(`${imageSrc}`).default}`;
-  return (
-    <div className="titleDiv">
-      <Parallax
-        bgImage={titleImage}
-        bgImageStyle={{ height: `1000px`, width: "100%", opacity: "1" }}
-        strength={400}
-        style={{height:'45vh'}}
-      >
-        <div style={{ height: "40vh" }}>
-          <div style={inlineStyle}>
-            <h1 className="roleTitle"> {txt1} </h1>
-            <h2> {txt2}</h2>
-            <h3> {txt3}</h3>
-          </div>
-        </div>
-      </Parallax>
-    </div>
-  );
-};
-const detailsDiv = (id, txt1, txt2, txt3, txt4, txt5, imageSrc, outLink) => {
-  return (
-    <div className="detailsDiv">
-      <ul className="detailsList">
-        <li className="listItem1">
-          <h3> {txt1}</h3>
-        </li>
-       {txt2?  <li className="listItem2">
-          <h3> {txt2}</h3>
-        </li> : <></> }
-        {txt3? <li className="listItem3">
-          <h3> {txt3}</h3>
-        </li> : <> </>}
-       {txt4?  <li className="listItem4">
-          <h3> {txt4} </h3>
-        </li> : <> </>}
-        { txt5?  <li style={{ wordSpacing: "0.8em" }} className="listItem5">
-          {" "}
-          <h3> {txt5} </h3>
-        </li> : <> </> }
-      </ul>
 
-      <div className="detailsRightSection">
-        {id <2 && (
-          <img src={require(`${imageSrc}`).default} className="detailsPic" />
-        )}
 
-        {(id > 1 ) && (
-          <div className="mediaContainer">
-            <div className="videoWrapper">
-              <div
-                className="videoContainer"
-                style={{
-                  backgroundImage:
-                    `url(${require(`${imageSrc}`).default})`,
-                }}
-              >
-                {(id == 2 || id == 3 || id == 4) && (
-                  <ExternalLink className="linkContainer" href={outLink}>
-                    <button className="youtubeButton">
-                      <p> {id == 2 ? "Visit Website!" : "Watch Me!"} </p>
-                      {id == 3 && <i className="fa fa-youtube-play"> </i>}
-                    </button>
-                  </ExternalLink>
-                )}
-              </div>
-            </div>
-          </div>
-        )}
-      </div>
-    </div>
-  );
-};
 
-const experienceDiv = (id) => {
-  return (
-    // <div className={snapScroll? 'experienceContainer': 'experienceContainer--nosnap'}>
-    <div style={{ scrollSnapAlign: "start" }}>
-      {titleDiv(
-        jsonData.experiences[id]["id"],
-        jsonData.experiences[id]["title-text1"],
-        jsonData.experiences[id]["title-text2"],
-        jsonData.experiences[id]["title-text3"],
-        jsonData.experiences[id]["title-imageSrc"]
-      )}
-
-      {detailsDiv(
-        jsonData.experiences[id]["id"],
-        jsonData.experiences[id]["details-text1"],
-        jsonData.experiences[id]["details-text2"],
-        jsonData.experiences[id]["details-text3"],
-        jsonData.experiences[id]["details-text4"],
-        jsonData.experiences[id]["details-text5"],
-        jsonData.experiences[id]["details-imageSrc"],
-        jsonData.experiences[id]["details-href"]
-      )}
-    </div>
-  );
-};
 function App() {
   const [showButton, setShowButton] = useState(false);
   const [showNavBackground, setShowNavBackground] = useState(null);
-  const [bigScreen, setBigScreen] = useState(true);
   
   const bodyElement = document.getElementsByTagName("BODY")[0];
   const htmlElement = document.getElementsByTagName("HTML")[0];
   const sections = document.querySelectorAll("section");
   const navLi = document.querySelectorAll(".navbarContainer .textContainer ul li");
-  // const navLiHome = document.querySelector(".navbarContainer .textContainer ul .home");
   
 
   useEffect(() => {
@@ -229,9 +114,7 @@ function App() {
           <AboutSection />
         </section>
         <section id="experiences" className="experiencesContainer">
-          {jsonData.experiences.map((experience, i) => (
-            <>{experienceDiv(experience.id)}</>
-            ))}
+          <ExperiencesSection />
         </section>
 
         <section id="skills" style={{ scrollSnapAlign: "start" }}>
@@ -245,61 +128,6 @@ function App() {
       </>
     )}
         </Media>
-    {/* <Cursor />
-     <Media queries={{
-       small: "(max-width: 599px)",
-       medium: "(min-width: 600px) and (max-width: 1199px)",
-          large: "(min-width: 1200px)"
-        }}>
-      {matches => (
-            <>
-              {matches.small && <DisabledSection/>}
-              {matches.medium && <DisabledSection/>}
-              {matches.large && <div className="App">
-        <div
-          id="navbar"
-          style={{
-            top: "0%",
-            position: "fixed",
-            zIndex: "999",
-            width: "100%",
-            height: "8vh",
-          }}
-        >
-          <Navbar showBackground={showNavBackground} />
-        </div>
-
-        {showButton && (
-          <div onClick={handleTopClick}>
-            <BackToTop />
-          </div>
-        )}
-
-        <section id="home" style={{ scrollSnapAlign: "start" }}>
-          <HomeSection />
-        </section>
-        <section id="aboutMe" style={{ scrollSnapAlign: "start" }}>
-          <AboutSection />
-        </section>
-        <section id="experiences" className="experiencesContainer">
-          {jsonData.experiences.map((experience, i) => (
-            <>{experienceDiv(experience.id)}</>
-          ))}
-        </section>
-
-        <section id="skills" style={{ scrollSnapAlign: "start" }}>
-          <Skills />
-        </section>
-
-        <section id="contact" style={{ scrollSnapAlign: "start" }}>
-          <Contact />
-        </section>
-      </div>
-      }
-            </>
-      )}
-    </Media>*/
-  }
     </> 
   );
 }
