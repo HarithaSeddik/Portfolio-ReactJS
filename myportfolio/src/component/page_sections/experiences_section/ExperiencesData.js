@@ -1,6 +1,7 @@
 export const experiencesData = [  
     {
         "id":0,
+        "section-bg-color":"#1a168847",
         "title-text1":"Mobile Software Developer - Kobil GmbH",
         "title-text2":"11/2021 - PRESENT ",
         "title-text3":"Istanbul, Turkey",
@@ -15,11 +16,12 @@ export const experiencesData = [
     },
     {
         "id":1,
-        "title-text1":"Software Developer - Enekom Energy",
+        "section-bg-color":"#042434b8",
+        "title-text1":"R&D Engineer- Enekom Energy",
         "title-text2":"09/2020 - 10/2021 ",
         "title-text3":"Ankara, Turkey",
         "title-imageSrc":require("../../../images/software-developer2.jpg").default,
-        "details-text1": "Developing Python desktop test tools, data processing with microcontroller based devices",
+        "details-text1": "Developing Python desktop test tools, data processing with MicroController based devices",
         "details-text2": "Remote testing platform through Ubuntu Server on RaspberryPi ",
         "details-text3": "Arduino/ RaspberryPi based testing apparatuses for product shelf testing",
         "details-text4": "Wrote database management, and communication protocols with Python",
@@ -29,6 +31,7 @@ export const experiencesData = [
     },
     {
         "id":2,
+        "section-bg-color":"#95672b30",
         "title-text1":"E-commerce Bookstore Website - ReactJS",
         "title-text2":"",
         "title-text3":"",
@@ -44,6 +47,7 @@ export const experiencesData = [
     },
     {
     "id":3,
+    "section-bg-color":"#5c1a1a45",
     "title-text1":"Development of a Hunter Drone Platform- Meteksan Savunma",
     "title-text2":"09/2019 - 06/2020 ",
     "title-text3":"Ankara, Turkey",
