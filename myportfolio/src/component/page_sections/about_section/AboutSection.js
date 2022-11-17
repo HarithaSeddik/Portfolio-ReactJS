@@ -25,10 +25,10 @@ const AboutSection = () => {
           </h5>
           <p className="aboutParagraph">
             {" "}
-            I am a fullstack developer that has worked extensively with{" "}
-            <span>Flutter</span> and <span>React.Js</span>. I am also skilled at
-            multiple backend frameworks including <span>Python</span> and{" "}
-            <span>NodeJs</span>.
+            I am a mobile and fullstack developer that has worked extensively
+            with <span>Flutter</span> and <span>React.Js</span>. I am also
+            skilled at multiple backend frameworks including <span>Python</span>{" "}
+            and <span>NodeJs</span>.
             <br />
             <br />I am fluent in <span>English, Turkish,</span> and{" "}
             <span> Arabic</span> spoken languages.

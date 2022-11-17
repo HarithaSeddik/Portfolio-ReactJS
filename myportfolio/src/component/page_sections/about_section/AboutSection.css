@@ -16,7 +16,7 @@
   transition: ease all 0.5s;
 }
 .aboutPic:hover {
-  transform: scale(1.01);
+  transform: scale(1.05);
   transition: ease all 0.5s;
 }
 
@@ -25,20 +25,16 @@
 }
 
 .aboutTextDiv {
-  font-family: "Playfair Display", serif;
-  line-height: 0.5em;
-
+  font-family: "Sans-serif";
   color: rgb(226, 223, 223);
-
   display: flex;
   flex-direction: column;
-  text-align: justify;
+  /* text-align: justify; */
   align-content: center;
   width: 35vw;
   left: 36%;
-  top: 13vh;
-  font-size: 1.5rem;
-  font-family: "Playfair Display", serif;
+  top: 15vh;
+  font-size: 1.8rem;
   position: relative;
 }
 .aboutTextDiv span {
@@ -48,8 +44,8 @@
 .aboutParagraph {
   width: 26vw;
   text-align: justify;
-  font-size: 0.94vw;
-  line-height: 120%;
+  font-size: 1rem;
+  line-height: 110%;
   color: rgb(220, 220, 220);
 }
 .aboutParagraph .gitHubLink {
@@ -106,7 +102,7 @@
 }
 .downloadResumeButton:hover {
   cursor: pointer;
-  transform: scale(1.2);
+  transform: scale(1.1);
   transition: ease all 0.5s;
 }
 

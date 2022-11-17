@@ -71,7 +71,7 @@
   vertical-align: middle;
 }
 .detailsList li:last-child {
-  font-size: 1.2em;
+  font-size: 1.15em;
   letter-spacing: 0;
   font-weight: bolder;
 }
@@ -81,9 +81,8 @@
   display: grid;
   grid-template-columns: repeat(2, auto);
   justify-content: center;
-  width: 150px;
   width: fit-content;
-  height: 10%;
+  height: 40%;
   align-content: center;
   font-size: 0.6em;
   margin-top: 10%;
@@ -94,6 +93,10 @@
   border: 2px solid var(--orangeLight);
   transition: all 0.3 ease-out;
   white-space: nowrap;
+}
+.youtubeButton p {
+  font-size: 0.7rem;
+  margin-top: 20%;
 }
 .youtubeButton:hover {
   cursor: pointer;

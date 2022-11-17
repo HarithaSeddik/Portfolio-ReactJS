@@ -289,6 +289,7 @@
   margin-left: -25vw;
   top: 12%;
   font-family: "Saira Condensed", sans-serif;
+  text-align: center;
 }
 
 /** Code for hover info **/
@@ -366,24 +367,16 @@
   left: 8%;
 }
 .skillsTextDiv ul li {
-  position: relative;
-  width: fit-content;
+  padding-left: 1ch;
   list-style: none;
   transition: all 0.4s ease;
 }
 
-.skillsTextDiv ul li:before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  margin-top: -7px;
-  left: -20px;
-  display: block;
-  border-radius: 20px;
-  background: #d6913791;
-  width: 15px;
-  height: 15px;
-  transition: all 0.5s ease;
+.skillsTextDiv ul li::marker {
+  content: "\2022";
+  content: "➤";
+  color: orange;
+  font-size: 20px;
 }
 .skillsTextDiv ul li h3 {
   color: rgb(192, 191, 191);
@@ -393,5 +386,4 @@
   font-size: 1.2vw;
   font-weight: 900;
   letter-spacing: 0.05em;
-  vertical-align: middle;
 }
