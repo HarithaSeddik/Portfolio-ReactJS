@@ -4,7 +4,6 @@ import "./ExperiencesSection.css";
 import { experiencesData } from "./ExperiencesData";
 import Carousel from "react-bootstrap/Carousel";
 import "bootstrap/dist/css/bootstrap.css";
-import backgroundPic from "../../../images/aboutPic2.jpg";
 import { useState } from "react";
 
 const inlineStyle = {
@@ -33,7 +32,6 @@ const titleDiv = (id, txt1, txt2, txt3, imageSrc) => {
         bgImage={titleImage}
         bgImageStyle={{ height: `1000px`, width: "100%", opacity: "1" }}
         strength={400}
-        // style={{ height: "45vh" }}
       >
         <div className="titleTextContainer" style={{ height: "20vh" }}>
           <div style={inlineStyle}>

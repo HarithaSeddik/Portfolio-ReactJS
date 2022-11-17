@@ -144,7 +144,7 @@ const Cursor = (bigScreen) => {
     function handleLinkHovers() {
       document.querySelectorAll("a").forEach(el => {
         el.addEventListener("mouseover", () => {
-        //   cursorEnlarged.current = true;
+          cursorEnlarged.current = true;
           toggleCursorSize();
         });
         el.addEventListener("mouseout", () => {
