@@ -2,6 +2,10 @@ import { Parallax } from "react-parallax";
 import { ExternalLink } from "react-external-link";
 import "./ExperiencesSection.css";
 import { experiencesData } from "./ExperiencesData";
+import Carousel from "react-bootstrap/Carousel";
+import "bootstrap/dist/css/bootstrap.css";
+import backgroundPic from "../../../images/aboutPic2.jpg";
+import { useState } from "react";
 
 const inlineStyle = {
   background: "transparent",
@@ -29,9 +33,9 @@ const titleDiv = (id, txt1, txt2, txt3, imageSrc) => {
         bgImage={titleImage}
         bgImageStyle={{ height: `1000px`, width: "100%", opacity: "1" }}
         strength={400}
-        style={{ height: "45vh" }}
+        // style={{ height: "45vh" }}
       >
-        <div style={{ height: "40vh" }}>
+        <div className="titleTextContainer" style={{ height: "20vh" }}>
           <div style={inlineStyle}>
             <h1 className="roleTitle"> {txt1} </h1>
             <h2> {txt2}</h2>
@@ -60,6 +64,7 @@ const detailsDiv = (
         <li className="listItem1">
           <h3> {txt1}</h3>
         </li>
+
         {txt2 ? (
           <li className="listItem2">
             <h3> {txt2}</h3>
@@ -137,9 +142,8 @@ const detailsDiv = (
 };
 
 const experienceDiv = (experienceJson) => {
-  console.log(experienceJson);
   return (
-    <div style={{ scrollSnapAlign: "start" }}>
+    <>
       {titleDiv(
         experienceJson["id"],
         experienceJson["title-text1"],
@@ -160,16 +164,36 @@ const experienceDiv = (experienceJson) => {
         experienceJson["details-imageSrc"],
         experienceJson["details-href"]
       )}
-    </div>
+    </>
   );
 };
+
 const ExperiencesSection = () => {
+  const [index, setIndex] = useState(0);
+
+  const handleSelect = (selectedIndex, e) => {
+    setIndex(selectedIndex);
+  };
   return (
-    <>
-      {experiencesData.map((experience, i) => {
-        return <>{experienceDiv(experience)}</>;
-      })}
-    </>
+    <div
+      className="sectionDiv"
+      style={{
+        backgroundColor: `${experiencesData[index]["section-bg-color"]}`,
+      }}
+    >
+      <div className="carouselContainer">
+        <Carousel
+          pause="false"
+          interval={15000}
+          activeIndex={index}
+          onSelect={handleSelect}
+        >
+          {experiencesData.map((experience, i) => {
+            return <Carousel.Item>{experienceDiv(experience)}</Carousel.Item>;
+          })}
+        </Carousel>
+      </div>
+    </div>
   );
 };
 
