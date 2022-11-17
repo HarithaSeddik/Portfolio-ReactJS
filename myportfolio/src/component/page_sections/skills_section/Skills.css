@@ -326,7 +326,7 @@
   top: 50%;
   left: 20%;
   opacity: 0;
-  width: 4vw;
+  width: fit-content;
   font-size: 13px;
   font-weight: 700;
   line-height: 1.5em;
