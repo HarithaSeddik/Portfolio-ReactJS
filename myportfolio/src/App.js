@@ -71,7 +71,7 @@ function App() {
 
   return (
     <>
-      {/* <Cursor /> */}
+      <Cursor />
       <Media
         queries={{
           small: "(max-width: 599px)",
