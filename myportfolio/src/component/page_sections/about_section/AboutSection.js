@@ -19,10 +19,7 @@ const AboutSection = () => {
       <div className="rightSection">
         <div className="aboutTextDiv">
           <h1> Haritha Akkad</h1>
-          <h5>
-            {" "}
-            A <span> software engineer</span> based in <span> Turkey </span>
-          </h5>
+          <h5> A Software Engineer based in Istanbul</h5>
           <p className="aboutParagraph">
             {" "}
             I am a mobile and fullstack developer that has worked extensively

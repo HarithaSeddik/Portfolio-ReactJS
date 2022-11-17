@@ -36,8 +36,8 @@ const titleDiv = (id, txt1, txt2, txt3, imageSrc) => {
         <div className="titleTextContainer" style={{ height: "20vh" }}>
           <div style={inlineStyle}>
             <h1 className="roleTitle"> {txt1} </h1>
-            <h2> {txt2}</h2>
-            <h3> {txt3}</h3>
+            <h5> {txt2}</h5>
+            <h5> {txt3}</h5>
           </div>
         </div>
       </Parallax>
