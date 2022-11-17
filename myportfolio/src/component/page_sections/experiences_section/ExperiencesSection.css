@@ -1,11 +1,13 @@
 .roleTitle {
   color: var(--orange);
-  font-weight: inherit;
-  font-weight: 900;
-  font-size: 2rem;
+  font-weight: 600;
+  font-size: 1.6rem;
 }
 .titleDiv {
   height: auto;
+}
+.titleTextContainer {
+  margin: 2.5vh;
 }
 .detailsDiv {
   height: fit-content;
@@ -18,6 +20,7 @@
   align-content: center;
   justify-content: center;
   background: var(--black);
+  padding-right: 3%;
   gap: inherit;
 }
 .detailsRightSection {
@@ -25,20 +28,20 @@
   height: 100%;
 }
 .detailsPic {
-  margin-top: 5%;
-  height: 370px;
+  margin-top: 15%;
+  height: 300px;
 }
 
 .detailsList {
-  width: 45%;
+  width: 55%;
   padding-top: 7vh;
   padding-bottom: 50px;
-  justify-content: center;
-  font-size: 0.9vw;
-  grid-gap: 0.5vw;
+  font-size: 0.8vw;
+  grid-gap: 1.5vw;
   display: flex;
-  padding-right: 10%;
-  margin: 0;
+  height: 100%;
+  padding-left: 6%;
+  margin-right: 2%;
   flex-direction: column;
   color: white;
 }
@@ -46,43 +49,28 @@
 .detailsList li {
   position: relative;
   width: fit-content;
-  list-style: none;
+  height: fit-content;
+  padding-left: 1ch;
   transition: all 0.4s ease;
 }
-.detailsList li:before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  margin-top: -25px;
-  left: -20px;
-  display: block;
-  border-radius: 28px;
-  background: #d6913791;
-  width: 50px;
-  height: 50px;
-  transition: all 0.5s ease;
+.detailsList li::marker {
+  content: "\2022";
+  content: "➤";
+  color: orange;
+  font-size: 20px;
 }
+
 .detailsList li h3 {
   font-family: "Playfair Display", serif;
   font-family: "Saira Condensed", sans-serif;
   position: relative;
   font-weight: 900;
   letter-spacing: 0.07em;
-  font-size: 1.3em;
+  font-size: 1.5em;
   vertical-align: middle;
 }
-.detailsList li:hover:before {
-  height: 100%;
-  padding-left: 20px;
-  height: 80%;
-  padding-right: 20px;
-  margin-top: -5%;
-  width: 100%;
-  transition: all 0.9s ease;
-  background: var(--orangeLight);
-}
 .detailsList li:last-child {
-  font-size: 1.2em;
+  font-size: 1.15em;
   letter-spacing: 0;
   font-weight: bolder;
 }
@@ -92,9 +80,8 @@
   display: grid;
   grid-template-columns: repeat(2, auto);
   justify-content: center;
-  width: 150px;
   width: fit-content;
-  height: 10%;
+  height: 40%;
   align-content: center;
   font-size: 0.6em;
   margin-top: 10%;
@@ -105,6 +92,10 @@
   border: 2px solid var(--orangeLight);
   transition: all 0.3 ease-out;
   white-space: nowrap;
+}
+.youtubeButton p {
+  font-size: 0.7rem;
+  margin-top: 20%;
 }
 .youtubeButton:hover {
   cursor: pointer;
@@ -131,13 +122,12 @@
   cursor: pointer;
 }
 .mediaContainer {
-  height: 100%;
   text-decoration: none;
   display: flex;
 }
 .videoWrapper {
-  height: 360px;
-  width: 380px;
+  height: 320px;
+  width: 340px;
   background: var(--grey);
   top: 20%;
   margin-top: 5%;
@@ -146,16 +136,42 @@
 }
 .videoContainer {
   position: relative;
-  height: 360px;
-  width: 380px;
+  height: 320px;
+  width: 340px;
   background-position: center;
-  margin-top: 0%;
   border-radius: 50%;
   display: flex;
   background-repeat: no-repeat;
   border-style: solid;
 }
-.experiencesContainer {
-  height: 100%vh;
-  font-family: "Playfair Display", serif;
+.sectionDiv {
+  height: 100vh;
+  padding: 15vh 10vw 20vh 10vw;
+  overflow: hidden;
+  position: relative;
+  transition: background-color 650ms linear;
+}
+.currentSectionBG {
+  opacity: 0.5;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: min-content;
+  padding-bottom: 62%;
+}
+.carousel-item {
+  -webkit-mask-image: -webkit-gradient(
+    linear,
+    center top,
+    center bottom,
+    color-stop(0.9, rgba(0, 0, 0, 1)),
+    color-stop(1, rgba(0, 0, 0, 0.3))
+  );
+  mask-image: -webkit-gradient(
+    linear,
+    center top,
+    center bottom,
+    color-stop(0.9, rgba(0, 0, 0, 1)),
+    color-stop(1, rgba(0, 0, 0, 0.3))
+  );
 }
