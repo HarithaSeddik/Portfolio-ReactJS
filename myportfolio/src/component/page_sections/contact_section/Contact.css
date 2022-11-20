@@ -55,8 +55,8 @@
   display: flex;
   gap: 10%;
   justify-content: center;
-  width: 11vw;
-  height: 6vh;
+  width: 12vw;
+  height: 7nvh;
   align-content: center;
   font-size: 1vw;
   background-color: transparent;
@@ -71,13 +71,16 @@
 }
 .locationButton p {
   position: relative;
-  top: 5%;
+  font-size: 1.3em;
+  font-weight: 900;
+  padding-top: 4%;
+  padding-left: 5%;
   justify-content: center;
 }
 .locationButton .fa-map-marker-alt {
   position: relative;
   font-size: 2em;
-  padding-top: 5%;
+  padding-top: 1%;
 }
 
 .customCard {
@@ -86,6 +89,9 @@
   top: 8vh;
   right: 0%;
   height: fit-content;
+}
+.customCard .textField {
+  background-color: #72727292;
 }
 
 .customCard .messageSuccess {

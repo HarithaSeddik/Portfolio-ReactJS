@@ -5,7 +5,6 @@ import {
   Button,
   CardContent,
   Grid,
-  Card,
   Typography,
 } from "@material-ui/core";
 import axios from "axios";
@@ -14,11 +13,14 @@ import ReCAPTCHA from "react-google-recaptcha";
 
 const useStyles = makeStyles(() => ({
   TextField: {
-    backgroundColor: "rgba(80,80,80,0.2)",
+    backgroundColor: "#72727292",
     color: "#fff",
   },
   Button: {
     backgroundColor: "#ce8c36e3",
+  },
+  InputLabelProps: {
+    color: "#fff",
   },
 }));
 
@@ -155,7 +157,7 @@ const Contact = () => {
             )}
             <form onSubmit={submitForm}>
               <Grid container spacing={2}>
-                <Grid className="textField" xs={12} item>
+                <Grid xs={12} item>
                   <div>
                     <TextField
                       onChange={updateFormControl}
